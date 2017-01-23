@@ -7,6 +7,7 @@
 //
 
 #import "FMYRuntimTableViewController.h"
+#import "FMYRuntimePropertiesViewController.h"
 
 @interface FMYRuntimTableViewController ()
 
@@ -17,11 +18,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.arrDataSource addObject:@"获取对象的属性"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.arrDataSource.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    FMYTableViewCell *cell = (FMYTableViewCell *)[super tableView:tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
+    cell.textLabel.text = self.arrDataSource[indexPath.row];
+    
+    return cell ;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    FMYRuntimePropertiesViewController *propertiesVC = [[FMYRuntimePropertiesViewController alloc] init];
+    [self.navigationController pushViewController:propertiesVC animated:YES];
 }
 
 

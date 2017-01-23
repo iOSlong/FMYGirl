@@ -11,5 +11,6 @@
 @interface FMYTableViewController : FMYViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) FMYTableView *tableView;
+@property (nonatomic, strong) NSMutableArray *arrDataSource;
 
 @end

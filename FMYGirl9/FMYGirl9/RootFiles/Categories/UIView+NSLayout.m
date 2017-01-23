@@ -8,6 +8,21 @@
 
 #import "UIView+NSLayout.h"
 
+extern FMYSpan FMYSpanMake(CGFloat left, CGFloat right, CGFloat top, CGFloat bottom) {
+    FMYSpan span;
+    span.spanLeft   = left;
+    span.spanRight  = right;
+    span.spanTop    = top;
+    span.spanBottom = bottom;
+    return span;
+}
+FMYSpan spanZero() {
+    return FMYSpanMake(0, 0, 0, 0);
+}
+
+
+
+
 @implementation UIView (NSLayout)
 
 
@@ -98,7 +113,96 @@
                                    attribute:NSLayoutAttributeBottom
                                    multiplier:1
                                    constant:-bottom]];
+    
 }
+
+- (void)layoutSpanBounds:(FMYSpan)span {
+    [self readyForLayout];
+    NSLayoutConstraint *spanLeft    = [NSLayoutConstraint
+                                       constraintWithItem:self
+                                       attribute:NSLayoutAttributeLeft
+                                       relatedBy:NSLayoutRelationEqual
+                                       toItem:self.superview
+                                       attribute:NSLayoutAttributeLeft
+                                       multiplier:1
+                                       constant:span.spanLeft];
+    
+    NSLayoutConstraint *spanRight   =  [NSLayoutConstraint
+                                        constraintWithItem:self
+                                        attribute:NSLayoutAttributeRight
+                                        relatedBy:NSLayoutRelationEqual
+                                        toItem:self.superview
+                                        attribute:NSLayoutAttributeRight
+                                        multiplier:1
+                                        constant:- span.spanRight];
+    
+    NSLayoutConstraint *spanTop     = [NSLayoutConstraint
+                                       constraintWithItem:self
+                                       attribute:NSLayoutAttributeTop
+                                       relatedBy:NSLayoutRelationEqual
+                                       toItem:self.superview
+                                       attribute:NSLayoutAttributeTop
+                                       multiplier:1
+                                       constant:span.spanTop];
+    
+    NSLayoutConstraint *spanBottom  = [NSLayoutConstraint
+                                       constraintWithItem:self
+                                       attribute:NSLayoutAttributeBottom
+                                       relatedBy:NSLayoutRelationEqual
+                                       toItem:self.superview
+                                       attribute:NSLayoutAttributeBottom
+                                       multiplier:1
+                                       constant:- span.spanBottom];
+    
+    [self.superview addConstraints:@[spanLeft, spanRight, spanTop, spanBottom]];
+}
+
+- (void)layoutCenterX:(CGFloat)centerX {
+    [self readyForLayout];
+    [self.superview addConstraint:[NSLayoutConstraint
+                                   constraintWithItem:self
+                                   attribute:NSLayoutAttributeCenterX
+                                   relatedBy:NSLayoutRelationEqual
+                                   toItem:self.superview
+                                   attribute:NSLayoutAttributeCenterX
+                                   multiplier:1
+                                   constant:centerX]];
+}
+- (void)layoutCenterY:(CGFloat)centerY {
+    [self readyForLayout];
+    [self.superview addConstraint:[NSLayoutConstraint
+                                   constraintWithItem:self
+                                   attribute:NSLayoutAttributeCenterY
+                                   relatedBy:NSLayoutRelationEqual
+                                   toItem:self.superview
+                                   attribute:NSLayoutAttributeCenterY
+                                   multiplier:1
+                                   constant:centerY]];
+}
+
+- (void)layoutCenter {
+    [self readyForLayout];
+    NSLayoutConstraint *cY = [NSLayoutConstraint
+                              constraintWithItem:self
+                              attribute:NSLayoutAttributeCenterY
+                              relatedBy:NSLayoutRelationEqual
+                              toItem:self.superview
+                              attribute:NSLayoutAttributeCenterY
+                              multiplier:1
+                              constant:0];
+    
+    NSLayoutConstraint *cX = [NSLayoutConstraint
+                              constraintWithItem:self
+                              attribute:NSLayoutAttributeCenterX
+                              relatedBy:NSLayoutRelationEqual
+                              toItem:self.superview
+                              attribute:NSLayoutAttributeCenterX
+                              multiplier:1
+                              constant:0];
+    
+    [self.superview addConstraints:@[cX, cY]];
+}
+
 
 
 - (void)layoutAuthor:(CGPoint)point;
@@ -137,6 +241,14 @@
 #endif
     
 }
+
+
+
+
+
+
+
+#pragma mark - equalLevel - relation
 
 
 - (void)relation:(NSLayoutRelation)relation
@@ -199,6 +311,15 @@
           constant:-spanV];
 }
 
+
+//- (void)equalCenterXToItem:(UIView * _Nonnull)toView {
+//    [self relation:NSLayoutRelationEqual
+//            toItem:toView
+//      desAttribute:NSLayoutAttributeCenterX
+//       toAttribute:NSLayoutAttributeCenterX
+//        multiplier:1
+//          constant:0];
+//}
 
 - (void)equalAttribute:(NSLayoutAttribute)attribute toItem:(UIView * _Nonnull)toView;{
     [self relation:NSLayoutRelationEqual

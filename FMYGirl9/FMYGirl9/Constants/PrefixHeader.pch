@@ -24,7 +24,8 @@
 
 #import "FMYConstantUI.h"
 #import "FMYConstantStr.h"
-
+#import "UIView+NSLayout.h"
+#import "UIView+Positioning.h"
 
 
 //如果有Debug这个宏的话,就允许log输出...可变参数

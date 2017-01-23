@@ -8,6 +8,28 @@
 
 #import <UIKit/UIKit.h>
 
+typedef struct FMYSpan {
+    CGFloat spanLeft;
+    CGFloat spanRight;
+    CGFloat spanTop;
+    CGFloat spanBottom;
+}FMYSpan;
+
+extern FMYSpan FMYSpanMake(CGFloat x, CGFloat y, CGFloat top, CGFloat bottom);
+
+FMYSpan spanZero();
+
+/*
+ FMYSpanMake
+ 必须要将 实现部分转移到.m 文件中， 否者这个地方在变异的时候会出现报错：
+ ld: 18 duplicate symbols for architecture x86_64
+ clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ */
+//FMYSpan spanZero() {
+//    return FMYSpanMake(0, 0, 0, 0);
+//}
+
+
 @interface UIView (NSLayout)
 
 #pragma mark base set
@@ -18,9 +40,17 @@
 - (void)layoutRight:(CGFloat)right;
 - (void)layoutBottom:(CGFloat)bottom;
 
+- (void)layoutCenterX:(CGFloat)centerX;
+- (void)layoutCenterY:(CGFloat)centerY;
+- (void)layoutCenter ;
+
+- (void)layoutSpanBounds:(FMYSpan)span;
+
+
 #pragma mark  two-dimension set
 - (void)layoutSize:(CGSize)size;
 - (void)layoutAuthor:(CGPoint)point;
+
 
 #pragma mark relation dimension set
 - (void)relation:(NSLayoutRelation)relation

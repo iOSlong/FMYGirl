@@ -45,8 +45,9 @@
 
 // 抽屉的宽度
 
-#define mySpanLeft      (15 * kRATIO)
-#define mySpanIn        (k_SpanLeft/2)
+#define mySpanLeft      (15 * myRATIO)
+#define mySpanIn        (mySpanLeft/2)
+#define myDisplayW      (SCREENW - 2 * mySpanLeft)
 
 
 

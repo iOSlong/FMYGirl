@@ -14,9 +14,15 @@
 
 @implementation FMYTableViewController
 
+- (NSMutableArray *)arrDataSource {
+    if (!_arrDataSource) {
+        _arrDataSource = [NSMutableArray array];
+    }
+    return _arrDataSource;
+}
 - (FMYTableView *)tableView {
     if (!_tableView) {
-        _tableView = [[FMYTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView = [[FMYTableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.dataSource   = self;
         _tableView.delegate     = self;
     }
@@ -27,6 +33,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.tableView];
+    [self.tableView layoutSpanBounds:FMYSpanMake(0, 0, 0, 49)];
 }
 
 

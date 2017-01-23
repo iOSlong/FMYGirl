@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E2F0D181E35D63A000394D8 /* FMYRuntimePropertiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F0D171E35D63A000394D8 /* FMYRuntimePropertiesViewController.m */; };
+		8E2F0D1B1E35DE14000394D8 /* FMYChinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F0D1A1E35DE14000394D8 /* FMYChinese.m */; };
 		8EFE49701E34B1BE00B2513A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE496F1E34B1BE00B2513A /* main.m */; };
 		8EFE49731E34B1BE00B2513A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE49721E34B1BE00B2513A /* AppDelegate.m */; };
 		8EFE49761E34B1BE00B2513A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE49751E34B1BE00B2513A /* ViewController.m */; };
@@ -31,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E2F0D161E35D63A000394D8 /* FMYRuntimePropertiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYRuntimePropertiesViewController.h; sourceTree = "<group>"; };
+		8E2F0D171E35D63A000394D8 /* FMYRuntimePropertiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYRuntimePropertiesViewController.m; sourceTree = "<group>"; };
+		8E2F0D191E35DE14000394D8 /* FMYChinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYChinese.h; sourceTree = "<group>"; };
+		8E2F0D1A1E35DE14000394D8 /* FMYChinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYChinese.m; sourceTree = "<group>"; };
 		8EFE496B1E34B1BE00B2513A /* FMYGirl9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMYGirl9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFE496F1E34B1BE00B2513A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8EFE49711E34B1BE00B2513A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -224,8 +230,12 @@
 			children = (
 				8EFE49BB1E34BB3000B2513A /* FMYPerson.h */,
 				8EFE49BC1E34BB3000B2513A /* FMYPerson.m */,
+				8E2F0D191E35DE14000394D8 /* FMYChinese.h */,
+				8E2F0D1A1E35DE14000394D8 /* FMYChinese.m */,
 				8EFE49BE1E34BB9900B2513A /* FMYRuntimTableViewController.h */,
 				8EFE49BF1E34BB9900B2513A /* FMYRuntimTableViewController.m */,
+				8E2F0D161E35D63A000394D8 /* FMYRuntimePropertiesViewController.h */,
+				8E2F0D171E35D63A000394D8 /* FMYRuntimePropertiesViewController.m */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -312,6 +322,7 @@
 				8EFE49911E34B25300B2513A /* FMYTableView.m in Sources */,
 				8EFE49971E34B27F00B2513A /* FMYLabel.m in Sources */,
 				8EFE499B1E34B2E400B2513A /* FMYNavigationController.m in Sources */,
+				8E2F0D1B1E35DE14000394D8 /* FMYChinese.m in Sources */,
 				8EFE498E1E34B23B00B2513A /* FMYTableViewCell.m in Sources */,
 				8EFE49AA1E34B4A300B2513A /* Readme.md in Sources */,
 				8EFE49881E34B20E00B2513A /* FMYObject.m in Sources */,
@@ -320,6 +331,7 @@
 				8EFE49731E34B1BE00B2513A /* AppDelegate.m in Sources */,
 				8EFE49941E34B27000B2513A /* FMYButton.m in Sources */,
 				8EFE49701E34B1BE00B2513A /* main.m in Sources */,
+				8E2F0D181E35D63A000394D8 /* FMYRuntimePropertiesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +490,7 @@
 				8EFE49841E34B1BE00B2513A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

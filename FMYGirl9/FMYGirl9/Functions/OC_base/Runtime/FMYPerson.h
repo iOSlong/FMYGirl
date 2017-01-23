@@ -13,6 +13,6 @@
 @property NSString *name;
 @property NSString *ID;
 @property NSNumber *age;
-
+@property NSNumber *sex;
 
 @end

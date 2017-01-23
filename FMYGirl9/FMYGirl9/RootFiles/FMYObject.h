@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface FMYObject : NSObject
+
+- (NSArray *)fmyProperties;
++ (NSArray *)fmyProperties;
 
 @end
