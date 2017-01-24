@@ -9,7 +9,10 @@
 #import "AppDelegate.h"
 #import "FMYTabBarController.h"
 #import "FMYNavigationController.h"
+
+#import "FMYUITableViewController.h"
 #import "FMYRuntimTableViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -21,13 +24,22 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    FMYUITableViewController        *uiVC       = [FMYUITableViewController new];
     
-    FMYRuntimTableViewController *runtimeTVC = [[FMYRuntimTableViewController alloc] init];
+    FMYRuntimTableViewController    *runtimeTVC = [FMYRuntimTableViewController new];
+    
     FMYNavigationController *navRuntime = [[FMYNavigationController alloc] initWithRootViewController:runtimeTVC];
+    FMYNavigationController *navUI      = [[FMYNavigationController alloc] initWithRootViewController:uiVC];
+    
+    uiVC.title  = @"UI";
+    navUI.title = @"UI";
+    runtimeTVC.title = @"Runtimes";
+    navRuntime.title = @"RT";
+    
     
     
     FMYTabBarController *tabC = [[FMYTabBarController alloc] init];
-    tabC.viewControllers = @[navRuntime];
+    tabC.viewControllers = @[navUI,navRuntime];
     
     
     self.window.rootViewController = tabC;

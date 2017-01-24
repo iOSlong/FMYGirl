@@ -15,7 +15,7 @@ typedef struct FMYSpan {
     CGFloat spanBottom;
 }FMYSpan;
 
-extern FMYSpan FMYSpanMake(CGFloat x, CGFloat y, CGFloat top, CGFloat bottom);
+extern FMYSpan FMYSpanMake(CGFloat left, CGFloat right, CGFloat top, CGFloat bottom);
 
 FMYSpan spanZero();
 

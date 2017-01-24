@@ -39,15 +39,22 @@
 
 #pragma mark - DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.arrDataSource.count;
 }
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (FMYTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *reusecellIdentifer = nil;
     reusecellIdentifer = NSStringFromClass([self class]);
     FMYTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reusecellIdentifer];
     if (cell == nil) {
-        cell = [[FMYTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reusecellIdentifer];
+        cell = [[FMYTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reusecellIdentifer];
     }
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    if (indexPath.row < self.arrDataSource.count) {
+        NSObject *item = self.arrDataSource[indexPath.row];
+        cell.textLabel.text = item.description;
+    }
+    
     return cell;
 }
 

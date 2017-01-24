@@ -8,6 +8,20 @@
 
 #import "FMYChinese.h"
 
+@interface FMYChinese ()
+
+@property FMYPerson *father;
+@property FMYPerson *mother;
+@property NSArray *children;
+
+@end
+
 @implementation FMYChinese
+
+
+- (NSString *)description {
+    return  self.ID;
+}
+
 
 @end

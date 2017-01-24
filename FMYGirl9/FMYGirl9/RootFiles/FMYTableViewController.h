@@ -13,4 +13,7 @@
 @property (nonatomic, strong) FMYTableView *tableView;
 @property (nonatomic, strong) NSMutableArray *arrDataSource;
 
+- (FMYTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath ;
+
+
 @end

@@ -12,8 +12,5 @@
 
 @property NSString *province;
 @property NSString *politicsStatus;
-@property FMYPerson *father;
-@property FMYPerson *mother;
-@property NSArray *children;
 
 @end
