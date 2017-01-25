@@ -10,4 +10,8 @@
 
 @interface FMYViewController : UIViewController
 
+
+- (void)showHint:(NSString *)hint hide:(CGFloat)delay;
+
+
 @end

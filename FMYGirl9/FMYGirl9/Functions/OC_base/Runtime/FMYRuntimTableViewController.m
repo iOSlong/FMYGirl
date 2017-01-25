@@ -8,7 +8,8 @@
 
 #import "FMYRuntimTableViewController.h"
 #import "FMYRuntimePropertiesViewController.h"
-
+#import "FMYRuntimeMsgSendViewController.h"
+#import "FMYRuntimeNormalCaseViewController.h"
 @interface FMYRuntimTableViewController ()
 
 @end
@@ -19,6 +20,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.arrDataSource addObject:@"获取对象的属性"];
+    [self.arrDataSource addObject:@"动态方法解析和转发"];
+    [self.arrDataSource addObject:@"runtime 7 种常用方法"];
+
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -36,8 +41,26 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    FMYRuntimePropertiesViewController *propertiesVC = [[FMYRuntimePropertiesViewController alloc] init];
-    [self.navigationController pushViewController:propertiesVC animated:YES];
+    FMYTableViewController *tableVC;
+    if (indexPath.row == 0)
+    {
+        FMYRuntimePropertiesViewController *propertiesVC = [FMYRuntimePropertiesViewController new];
+        tableVC = propertiesVC;
+    }
+    else if (indexPath.row == 1)
+    {
+        FMYRuntimeMsgSendViewController *msgSendVC = [FMYRuntimeMsgSendViewController new];
+        tableVC = msgSendVC;
+    }
+    else if (indexPath.row == 2)
+    {
+        FMYRuntimeNormalCaseViewController *caseVC = [FMYRuntimeNormalCaseViewController new];
+        tableVC = caseVC;
+    }
+    tableVC.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:tableVC animated:YES];
+
 }
 
 

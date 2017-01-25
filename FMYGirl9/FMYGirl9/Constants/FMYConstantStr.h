@@ -9,5 +9,12 @@
 #ifndef FMYConstantStr_h
 #define FMYConstantStr_h
 
+#ifdef __OBJC__
+
+#define delayTime    (1.5)
+
+
+
+#endif
 
 #endif /* FMYConstantStr_h */

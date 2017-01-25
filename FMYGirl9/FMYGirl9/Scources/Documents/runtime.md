@@ -1,5 +1,13 @@
 fmy.long
 
+<!--https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40008048-CH1-SW1  -->
+
+The Objective-C language defers as many decisions as it can from compile time and link time to runtime. Whenever possible, it does things dynamically. This means that the language requires not just a compiler, but also a runtime system to execute the compiled code. The runtime system acts as a kind of operating system for the Objective-C language; it’s what makes the language work.
+
+
+
+
+
 #import <objc/runtime.h>    //需要引入库
 
  
@@ -231,6 +239,17 @@ if([self respondsToSelector:@selector(method)]){
 
 
 
+# 消息传递
+Objective-C 中给一个对象发送消息会经过以下几个步骤：
+
+1. 在对象类的 dispatch table 中尝试找到该消息。如果找到了，跳到相应的函数IMP去执行实现代码；
+
+2. 如果没有找到，Runtime 会发送 +resolveInstanceMethod: 或者 +resolveClassMethod: 尝试去 resolve 这个消息；
+
+3. 如果 resolve 方法返回 NO，Runtime 就发送 -forwardingTargetForSelector: 允许你把这个消息转发给另一个对象；
+
+4. 如果没有新的目标对象返回， Runtime 就会发送 -methodSignatureForSelector: 和 -forwardInvocation: 消息。你可以发送 -invokeWithTarget: 消息来手动转发消息或者发送 -doesNotRecognizeSelector: 抛出异常。
+
 
 
 
@@ -250,4 +269,22 @@ if([self respondsToSelector:@selector(method)]){
 
 
 <!--http://tech.meituan.com/DiveIntoCategory.html   《深入理解Objective-C：Category》-->
+
+
+<!--http://tech.glowing.com/cn/objective-c-runtime/  《消息传递（Messaging）》-->
+
+
+<!--http://blog.sina.com.cn/s/blog_8c87ba3b0102v006.html |  http://blog.csdn.net/haishu_zheng/article/details/12873151 《使用methodSignatureForSelector与forwardInvocation实现消息转发 》《Objective-C中的@dynamic》-->
+
+<!--http://blog.sunnyxx.com  《唐巧个人博客》-->
+
+
+<!--http://tech.meituan.com/?l=80&pos=6409  《美团技术团队技术博客》-->
+
+
+
+<!--https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html-->
+ 
+ 
+
 

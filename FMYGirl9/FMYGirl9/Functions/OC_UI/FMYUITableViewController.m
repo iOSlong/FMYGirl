@@ -8,6 +8,8 @@
 
 #import "FMYUITableViewController.h"
 #import "FMYLayoutConstraintViewController.h"
+#import "FMYMKWebViewController.h"
+#import "FMYUIWebViewController.h"
 
 @interface FMYUITableViewController ()
 
@@ -18,13 +20,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.arrDataSource addObject:@"LayoutConstraint"];
+    [self.arrDataSource addObject:@"MKWebView - JS"];
+    [self.arrDataSource addObject:@"UIWebView - JS"];
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    FMYLayoutConstraintViewController *propertiesVC = [[FMYLayoutConstraintViewController alloc] init];
-    [self.navigationController pushViewController:propertiesVC animated:YES];
+    FMYViewController *desVC;
+    if (indexPath.row == 0)
+    {
+        FMYLayoutConstraintViewController *propertiesVC = [FMYLayoutConstraintViewController new];
+        desVC  = propertiesVC;
+    }
+    else if (indexPath.row == 1)
+    {
+        FMYMKWebViewController *mkwevVC = [FMYMKWebViewController new];
+        desVC  = mkwevVC;
+    }
+    else if (indexPath.row == 2)
+    {
+        FMYUIWebViewController *uiwevVC = [FMYUIWebViewController new];
+        desVC  = uiwevVC;
+    }
+    [self.navigationController pushViewController:desVC animated:YES];
 }
 
 

@@ -12,7 +12,8 @@
 @interface FMYObject : NSObject
 @property (nonatomic) NSString *fmy;
 
-- (NSArray *)fmyProperties;
-+ (NSArray *)fmyProperties;
-//
+char * lishangyin_miss();
+
+- (NSString *)shangyinLi;
+
 @end

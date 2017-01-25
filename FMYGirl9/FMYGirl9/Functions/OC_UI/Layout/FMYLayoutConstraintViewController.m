@@ -26,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"旋屏看比";
+    
     self.viewBottom = [self viewWithColor:[UIColor redColor]];
     
     self.viewMidleTop       = [self viewWithColor:[UIColor yellowColor]];

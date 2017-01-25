@@ -11,68 +11,16 @@
 
 @implementation FMYObject
 
-//- (NSArray *)fmyProperties {
-//    NSMutableArray *properties = [NSMutableArray array];
-//    
-//    
-////    object_
-////    objc_
-////    class_
-////    ivar_
-//    
-//    
-//    unsigned int outCout = 0;
-//    Ivar *vars = class_copyIvarList([self class], &outCout);
-//    
-//    for (int i = 0; i < outCout; i ++) {
-//        
-//        Ivar ivar = vars[i];
-//        
-//        const char *propertyName = ivar_getName(ivar);//变量名
-//        
-//        const char *propertyType = ivar_getTypeEncoding(ivar);//编码类型
-//        
-//        NSString *name = [NSString stringWithUTF8String:propertyName];
-//        NSString *type = [NSString stringWithUTF8String:propertyType];
-//        
-//        NSDictionary *dict = @{@"name": name,
-//                               @"type": type};
-//        
-//        [properties addObject:dict];
-//    }
-//    
-//    return properties;
-//}
-//
-//+ (NSArray *)fmyProperties;
-//{
-//    return [[self class] properties];
-//}
-//
-//+ (NSArray *)properties {
-//    NSMutableArray *properties = [NSMutableArray array];
-//    unsigned int outCout = 0;
-//    Ivar *vars = class_copyIvarList([self class], &outCout);
-//    
-//    for (int i = 0; i < outCout; i ++) {
-//        
-//        Ivar ivar = vars[i];
-//        
-//        const char *propertyName = ivar_getName(ivar);//变量名
-//        
-//        const char *propertyType = ivar_getTypeEncoding(ivar);//编码类型
-//        
-//        NSString *name = [NSString stringWithUTF8String:propertyName];
-//        NSString *type = [NSString stringWithUTF8String:propertyType];
-//        
-//        NSDictionary *dict = @{@"name": name,
-//                               @"type": type};
-//                
-//        [properties addObject:dict];
-//    }
-//    
-//    return properties;
-//}
+char * lishangyin_miss()
+{
+    return "相见时难别亦难，东风无力百花残。春蚕到死丝方尽，蜡炬成灰泪始干。晓镜但愁云鬓改，夜吟应觉月光寒。蓬山此去无多路，青鸟殷勤为探看";
+}
+
+- (NSString *)shangyinLi {
+    NSString *noTitle = [NSString stringWithUTF8String:lishangyin_miss()];
+    return noTitle;
+}
+
 
 
 

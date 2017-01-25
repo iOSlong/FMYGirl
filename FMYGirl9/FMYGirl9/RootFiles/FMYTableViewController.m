@@ -33,7 +33,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view addSubview:self.tableView];
-    [self.tableView layoutSpanBounds:FMYSpanMake(0, 0, 0, 49)];
+    [self.tableView layoutSpanBounds:FMYSpanMake(0, 0, 0, 0)];
+    
+
 }
 
 

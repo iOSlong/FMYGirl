@@ -7,12 +7,21 @@
 //
 
 #import "FMYViewController.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface FMYViewController ()
 
 @end
 
 @implementation FMYViewController
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,21 +30,28 @@
     
     self.view.backgroundColor = [UIColor blackColor];
     
+    
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)showHint:(NSString *)hint hide:(CGFloat)delay{
+    __block NSString *hintBlock = hint;
+    __block BOOL blockEnableBackgroundInteraction = YES;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        //TBLog(@"show hint loading");
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
+        // 如果允许操作下面的view, 需要禁用 mb 本身的userInteraction.
+        hud.userInteractionEnabled = !blockEnableBackgroundInteraction;
+        [hud.detailsLabel setFont:[UIFont systemFontOfSize:15 ]];
+        [hud setRemoveFromSuperViewOnHide:YES];
+        [hud setMode:MBProgressHUDModeText];
+        [hud.detailsLabel setText:hintBlock];
+        [hud hideAnimated:YES afterDelay:delay];
+        hud.center = CGPointMake(hud.center.x, 200);
+    });
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
 
 @end

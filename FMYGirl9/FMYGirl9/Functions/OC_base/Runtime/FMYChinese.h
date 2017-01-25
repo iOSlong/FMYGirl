@@ -13,4 +13,11 @@
 @property NSString *province;
 @property NSString *politicsStatus;
 
+
+@property NSString *talent;
+
+
+- (NSString *)learnTheArtifact;
+
+
 @end

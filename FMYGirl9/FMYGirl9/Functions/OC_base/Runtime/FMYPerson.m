@@ -11,4 +11,19 @@
 @implementation FMYPerson
 
 
+
+
+- (void)sayName;{
+    NSLog(@"my name is %@",self.name);
+}
+- (void)saySex;{
+    if (self.sex) {
+        NSLog(@"i am a %@",[self.sex integerValue] ? @"boy" : @"girl");
+    }else{
+        NSLog(@"i am not sure about this!");
+    }
+}
+
+
+
 @end

@@ -7,6 +7,7 @@
 partOne runtime_about
 # readAbout     :   runtime.md   
 # code_review   :   NSObject+FMY.m
+<!--Objective-C中的方法默认被隐藏了两个参数：self和_cmd。self指向对象本身，_cmd指向方法本身。-->
 
 
 

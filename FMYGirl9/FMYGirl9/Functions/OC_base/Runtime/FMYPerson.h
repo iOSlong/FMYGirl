@@ -15,4 +15,7 @@
 @property NSNumber *age;
 @property NSNumber *sex;
 
+- (void)sayName;
+- (void)saySex;
+
 @end
