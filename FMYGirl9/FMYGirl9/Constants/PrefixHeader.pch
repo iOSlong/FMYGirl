@@ -22,6 +22,7 @@
 #import "FMYViewController.h"
 #import "FMYTableViewController.h"
 
+#import "FMYUtils.h"
 #import "FMYConstantUI.h"
 #import "FMYConstantStr.h"
 #import "UIView+NSLayout.h"

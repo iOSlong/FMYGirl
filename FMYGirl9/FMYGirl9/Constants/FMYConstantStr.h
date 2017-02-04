@@ -12,6 +12,12 @@
 #ifdef __OBJC__
 
 #define delayTime    (1.5)
+static NSString *CACHE_DISK_NAMESPACE                   = @"fmy";
+static NSString *CACHE_DISK_IMAGELIST                   = @"com.fmy.imagelist";
+static NSString *CACHE_DISK_NEWSDETAIL                  = @"com.fmy.newsdetail";
+static NSString *CACHE_DISK_DATABASE                    = @"com.fmy.database";
+
+
 
 
 

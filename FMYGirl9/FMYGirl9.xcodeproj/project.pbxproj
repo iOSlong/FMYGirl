@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7E5CDA11A8AF9676363B4859 /* libPods-FMYGirl9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB314E124DF2D6E3EB94C6B /* libPods-FMYGirl9.a */; };
+		8E1BC1D21E45AA0100F868C1 /* FMYOCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1D11E45AA0100F868C1 /* FMYOCBaseViewController.m */; };
+		8E1BC1D61E45ABA000F868C1 /* FMYCoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1D51E45ABA000F868C1 /* FMYCoreDataViewController.m */; };
+		8E1BC1D91E45ABAD00F868C1 /* FMYSqliteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1D81E45ABAD00F868C1 /* FMYSqliteViewController.m */; };
+		8E1BC1DC1E45ABBA00F868C1 /* FMYDataStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1DB1E45ABBA00F868C1 /* FMYDataStoreViewController.m */; };
+		8E1BC1DE1E45AD3500F868C1 /* dataStore.md in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1DD1E45AD3500F868C1 /* dataStore.md */; };
+		8E1BC1E21E45AEA200F868C1 /* FMYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1E11E45AEA200F868C1 /* FMYUtils.m */; };
+		8E1BC1E51E45B26A00F868C1 /* FMYDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1E41E45B26A00F868C1 /* FMYDBManager.m */; };
+		8E1BC1E71E45B9EA00F868C1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1BC1E61E45B9EA00F868C1 /* libsqlite3.tbd */; };
 		8E2F0D181E35D63A000394D8 /* FMYRuntimePropertiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F0D171E35D63A000394D8 /* FMYRuntimePropertiesViewController.m */; };
 		8E2F0D1B1E35DE14000394D8 /* FMYChinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F0D1A1E35DE14000394D8 /* FMYChinese.m */; };
 		8E2F0D211E36FA9B000394D8 /* NSObject+FMY.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F0D201E36FA9B000394D8 /* NSObject+FMY.m */; };
@@ -24,6 +32,7 @@
 		8E2F0D461E38B66A000394D8 /* FMYUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F0D451E38B66A000394D8 /* FMYUIWebViewController.m */; };
 		8E2F0D4B1E38B77F000394D8 /* uiweb.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E2F0D491E38B77F000394D8 /* uiweb.html */; };
 		8E2F0D4C1E38B77F000394D8 /* mkweb.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E2F0D4A1E38B77F000394D8 /* mkweb.html */; };
+		8E2F0D4F1E38BA50000394D8 /* data_xml in Resources */ = {isa = PBXBuildFile; fileRef = 8E2F0D4E1E38BA50000394D8 /* data_xml */; };
 		8EFE49701E34B1BE00B2513A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE496F1E34B1BE00B2513A /* main.m */; };
 		8EFE49731E34B1BE00B2513A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE49721E34B1BE00B2513A /* AppDelegate.m */; };
 		8EFE49761E34B1BE00B2513A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE49751E34B1BE00B2513A /* ViewController.m */; };
@@ -51,6 +60,20 @@
 		19745F210658F5ADC7745726 /* Pods-FMYGirl9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMYGirl9.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FMYGirl9/Pods-FMYGirl9.debug.xcconfig"; sourceTree = "<group>"; };
 		36C004A94CC27E86FCEA362D /* Pods-FMYGirl9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMYGirl9.release.xcconfig"; path = "Pods/Target Support Files/Pods-FMYGirl9/Pods-FMYGirl9.release.xcconfig"; sourceTree = "<group>"; };
 		5CB314E124DF2D6E3EB94C6B /* libPods-FMYGirl9.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FMYGirl9.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E1BC1D01E45AA0100F868C1 /* FMYOCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYOCBaseViewController.h; sourceTree = "<group>"; };
+		8E1BC1D11E45AA0100F868C1 /* FMYOCBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYOCBaseViewController.m; sourceTree = "<group>"; };
+		8E1BC1D41E45ABA000F868C1 /* FMYCoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYCoreDataViewController.h; sourceTree = "<group>"; };
+		8E1BC1D51E45ABA000F868C1 /* FMYCoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYCoreDataViewController.m; sourceTree = "<group>"; };
+		8E1BC1D71E45ABAD00F868C1 /* FMYSqliteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYSqliteViewController.h; sourceTree = "<group>"; };
+		8E1BC1D81E45ABAD00F868C1 /* FMYSqliteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYSqliteViewController.m; sourceTree = "<group>"; };
+		8E1BC1DA1E45ABBA00F868C1 /* FMYDataStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYDataStoreViewController.h; sourceTree = "<group>"; };
+		8E1BC1DB1E45ABBA00F868C1 /* FMYDataStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYDataStoreViewController.m; sourceTree = "<group>"; };
+		8E1BC1DD1E45AD3500F868C1 /* dataStore.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = dataStore.md; sourceTree = "<group>"; };
+		8E1BC1E01E45AEA200F868C1 /* FMYUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYUtils.h; sourceTree = "<group>"; };
+		8E1BC1E11E45AEA200F868C1 /* FMYUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYUtils.m; sourceTree = "<group>"; };
+		8E1BC1E31E45B26A00F868C1 /* FMYDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYDBManager.h; sourceTree = "<group>"; };
+		8E1BC1E41E45B26A00F868C1 /* FMYDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYDBManager.m; sourceTree = "<group>"; };
+		8E1BC1E61E45B9EA00F868C1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		8E2F0D161E35D63A000394D8 /* FMYRuntimePropertiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYRuntimePropertiesViewController.h; sourceTree = "<group>"; };
 		8E2F0D171E35D63A000394D8 /* FMYRuntimePropertiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYRuntimePropertiesViewController.m; sourceTree = "<group>"; };
 		8E2F0D191E35DE14000394D8 /* FMYChinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYChinese.h; sourceTree = "<group>"; };
@@ -79,6 +102,7 @@
 		8E2F0D451E38B66A000394D8 /* FMYUIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYUIWebViewController.m; sourceTree = "<group>"; };
 		8E2F0D491E38B77F000394D8 /* uiweb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = uiweb.html; sourceTree = "<group>"; };
 		8E2F0D4A1E38B77F000394D8 /* mkweb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mkweb.html; sourceTree = "<group>"; };
+		8E2F0D4E1E38BA50000394D8 /* data_xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = data_xml; sourceTree = "<group>"; };
 		8EFE496B1E34B1BE00B2513A /* FMYGirl9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMYGirl9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFE496F1E34B1BE00B2513A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8EFE49711E34B1BE00B2513A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -128,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E1BC1E71E45B9EA00F868C1 /* libsqlite3.tbd in Frameworks */,
 				7E5CDA11A8AF9676363B4859 /* libPods-FMYGirl9.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +167,30 @@
 				36C004A94CC27E86FCEA362D /* Pods-FMYGirl9.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8E1BC1D31E45AB4200F868C1 /* DataStrore */ = {
+			isa = PBXGroup;
+			children = (
+				8E1BC1D41E45ABA000F868C1 /* FMYCoreDataViewController.h */,
+				8E1BC1D51E45ABA000F868C1 /* FMYCoreDataViewController.m */,
+				8E1BC1D71E45ABAD00F868C1 /* FMYSqliteViewController.h */,
+				8E1BC1D81E45ABAD00F868C1 /* FMYSqliteViewController.m */,
+				8E1BC1DA1E45ABBA00F868C1 /* FMYDataStoreViewController.h */,
+				8E1BC1DB1E45ABBA00F868C1 /* FMYDataStoreViewController.m */,
+				8E1BC1E31E45B26A00F868C1 /* FMYDBManager.h */,
+				8E1BC1E41E45B26A00F868C1 /* FMYDBManager.m */,
+			);
+			path = DataStrore;
+			sourceTree = "<group>";
+		};
+		8E1BC1DF1E45AE2D00F868C1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8E1BC1E01E45AEA200F868C1 /* FMYUtils.h */,
+				8E1BC1E11E45AEA200F868C1 /* FMYUtils.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		8E2F0D241E375049000394D8 /* OC_UI */ = {
@@ -186,6 +235,14 @@
 			path = Webfiles;
 			sourceTree = "<group>";
 		};
+		8E2F0D4D1E38BA0A000394D8 /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				8E2F0D4E1E38BA50000394D8 /* data_xml */,
+			);
+			path = Datasources;
+			sourceTree = "<group>";
+		};
 		8EFE49621E34B1BE00B2513A = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +264,7 @@
 		8EFE496D1E34B1BE00B2513A /* FMYGirl9 */ = {
 			isa = PBXGroup;
 			children = (
+				8E1BC1DF1E45AE2D00F868C1 /* Utils */,
 				8EFE49AC1E34B6F600B2513A /* Constants */,
 				8EFE49A71E34B45E00B2513A /* Scources */,
 				8EFE49981E34B2A700B2513A /* Functions */,
@@ -270,7 +328,10 @@
 		8EFE499F1E34B32700B2513A /* OC_base */ = {
 			isa = PBXGroup;
 			children = (
+				8E1BC1D31E45AB4200F868C1 /* DataStrore */,
 				8EFE49BA1E34BB0700B2513A /* Runtime */,
+				8E1BC1D01E45AA0100F868C1 /* FMYOCBaseViewController.h */,
+				8E1BC1D11E45AA0100F868C1 /* FMYOCBaseViewController.m */,
 			);
 			path = OC_base;
 			sourceTree = "<group>";
@@ -278,6 +339,7 @@
 		8EFE49A71E34B45E00B2513A /* Scources */ = {
 			isa = PBXGroup;
 			children = (
+				8E2F0D4D1E38BA0A000394D8 /* Datasources */,
 				8E2F0D481E38B763000394D8 /* Webfiles */,
 				8EFE49AB1E34B4E400B2513A /* Images */,
 				8EFE49A81E34B47800B2513A /* Documents */,
@@ -291,6 +353,7 @@
 				8EFE49A91E34B4A300B2513A /* Readme.md */,
 				8E2F0D221E37292C000394D8 /* runtime.md */,
 				8E2F0D2C1E37634B000394D8 /* uiabout.md */,
+				8E1BC1DD1E45AD3500F868C1 /* dataStore.md */,
 			);
 			path = Documents;
 			sourceTree = "<group>";
@@ -353,6 +416,7 @@
 		A75A1D07BC7E1A730F48B3DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E1BC1E61E45B9EA00F868C1 /* libsqlite3.tbd */,
 				5CB314E124DF2D6E3EB94C6B /* libPods-FMYGirl9.a */,
 			);
 			name = Frameworks;
@@ -420,6 +484,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E2F0D4F1E38BA50000394D8 /* data_xml in Resources */,
 				8EFE497E1E34B1BE00B2513A /* LaunchScreen.storyboard in Resources */,
 				8E2F0D4B1E38B77F000394D8 /* uiweb.html in Resources */,
 				8E2F0D4C1E38B77F000394D8 /* mkweb.html in Resources */,
@@ -492,14 +557,18 @@
 				8EFE49B31E34BA9000B2513A /* UIView+Positioning.m in Sources */,
 				8EFE49A51E34B39700B2513A /* FMYTableViewController.m in Sources */,
 				8EFE49B61E34BAC600B2513A /* UIView+NSLayout.m in Sources */,
+				8E1BC1DC1E45ABBA00F868C1 /* FMYDataStoreViewController.m in Sources */,
 				8EFE49911E34B25300B2513A /* FMYTableView.m in Sources */,
 				8EFE49971E34B27F00B2513A /* FMYLabel.m in Sources */,
 				8EFE499B1E34B2E400B2513A /* FMYNavigationController.m in Sources */,
 				8E2F0D401E38B49E000394D8 /* FMYMKWebViewController.m in Sources */,
+				8E1BC1E21E45AEA200F868C1 /* FMYUtils.m in Sources */,
 				8E2F0D431E38B4CE000394D8 /* WeakDelegate.m in Sources */,
 				8E2F0D2B1E37515A000394D8 /* FMYLayoutConstraintViewController.m in Sources */,
 				8E2F0D1B1E35DE14000394D8 /* FMYChinese.m in Sources */,
+				8E1BC1E51E45B26A00F868C1 /* FMYDBManager.m in Sources */,
 				8E2F0D2D1E37634B000394D8 /* uiabout.md in Sources */,
+				8E1BC1D21E45AA0100F868C1 /* FMYOCBaseViewController.m in Sources */,
 				8E2F0D331E38861B000394D8 /* FMYRuntimeNormalCaseViewController.m in Sources */,
 				8EFE498E1E34B23B00B2513A /* FMYTableViewCell.m in Sources */,
 				8EFE49AA1E34B4A300B2513A /* Readme.md in Sources */,
@@ -509,9 +578,12 @@
 				8E2F0D361E3899CA000394D8 /* FMYMovie.m in Sources */,
 				8EFE49B91E34BAD000B2513A /* NSString+CN.m in Sources */,
 				8EFE49731E34B1BE00B2513A /* AppDelegate.m in Sources */,
+				8E1BC1D91E45ABAD00F868C1 /* FMYSqliteViewController.m in Sources */,
 				8E2F0D461E38B66A000394D8 /* FMYUIWebViewController.m in Sources */,
+				8E1BC1D61E45ABA000F868C1 /* FMYCoreDataViewController.m in Sources */,
 				8E2F0D301E384A1F000394D8 /* FMYRuntimeMsgSendViewController.m in Sources */,
 				8EFE49941E34B27000B2513A /* FMYButton.m in Sources */,
+				8E1BC1DE1E45AD3500F868C1 /* dataStore.md in Sources */,
 				8EFE49701E34B1BE00B2513A /* main.m in Sources */,
 				8E2F0D3C1E389E4F000394D8 /* FMYChinese+Lishanyin.m in Sources */,
 				8E2F0D181E35D63A000394D8 /* FMYRuntimePropertiesViewController.m in Sources */,
