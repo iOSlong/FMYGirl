@@ -7,9 +7,11 @@
 //
 
 #import "FMYUITableViewController.h"
+
 #import "FMYLayoutConstraintViewController.h"
 #import "FMYMKWebViewController.h"
 #import "FMYUIWebViewController.h"
+#import "FMYBezierViewController.h"
 
 @interface FMYUITableViewController ()
 
@@ -22,6 +24,8 @@
     [self.arrDataSource addObject:@"LayoutConstraint"];
     [self.arrDataSource addObject:@"MKWebView - JS"];
     [self.arrDataSource addObject:@"UIWebView - JS"];
+    [self.arrDataSource addObject:@"Bezier —— View"];
+
 }
 
 
@@ -42,6 +46,11 @@
     {
         FMYUIWebViewController *uiwevVC = [FMYUIWebViewController new];
         desVC  = uiwevVC;
+    }
+    else if (indexPath.row == 3)
+    {
+        FMYBezierViewController *bezierVC = [FMYBezierViewController new];
+        desVC = bezierVC;
     }
     [self.navigationController pushViewController:desVC animated:YES];
 }

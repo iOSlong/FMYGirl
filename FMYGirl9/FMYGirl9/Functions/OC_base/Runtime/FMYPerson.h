@@ -17,5 +17,6 @@
 
 - (void)sayName;
 - (void)saySex;
+- (void)randomValue;
 
 @end

@@ -16,6 +16,11 @@
 		8E1BC1E21E45AEA200F868C1 /* FMYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1E11E45AEA200F868C1 /* FMYUtils.m */; };
 		8E1BC1E51E45B26A00F868C1 /* FMYDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1E41E45B26A00F868C1 /* FMYDBManager.m */; };
 		8E1BC1E71E45B9EA00F868C1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1BC1E61E45B9EA00F868C1 /* libsqlite3.tbd */; };
+		8E1BC1EB1E49AEF100F868C1 /* FMYBezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1EA1E49AEF100F868C1 /* FMYBezierViewController.m */; };
+		8E1BC1F01E49B1BB00F868C1 /* Control_BezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1ED1E49B1BB00F868C1 /* Control_BezierPath.m */; };
+		8E1BC1F11E49B1BB00F868C1 /* ControlBezierPlat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1EF1E49B1BB00F868C1 /* ControlBezierPlat.m */; };
+		8E1BC1F41E49B56600F868C1 /* FMYBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1F31E49B56600F868C1 /* FMYBottomView.m */; };
+		8E1BC1F61E49BECE00F868C1 /* fmywplist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BC1F51E49BECE00F868C1 /* fmywplist.plist */; };
 		8E2F0D181E35D63A000394D8 /* FMYRuntimePropertiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F0D171E35D63A000394D8 /* FMYRuntimePropertiesViewController.m */; };
 		8E2F0D1B1E35DE14000394D8 /* FMYChinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F0D1A1E35DE14000394D8 /* FMYChinese.m */; };
 		8E2F0D211E36FA9B000394D8 /* NSObject+FMY.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F0D201E36FA9B000394D8 /* NSObject+FMY.m */; };
@@ -74,6 +79,15 @@
 		8E1BC1E31E45B26A00F868C1 /* FMYDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYDBManager.h; sourceTree = "<group>"; };
 		8E1BC1E41E45B26A00F868C1 /* FMYDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYDBManager.m; sourceTree = "<group>"; };
 		8E1BC1E61E45B9EA00F868C1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		8E1BC1E91E49AEF100F868C1 /* FMYBezierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYBezierViewController.h; sourceTree = "<group>"; };
+		8E1BC1EA1E49AEF100F868C1 /* FMYBezierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYBezierViewController.m; sourceTree = "<group>"; };
+		8E1BC1EC1E49B1BB00F868C1 /* Control_BezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Control_BezierPath.h; sourceTree = "<group>"; };
+		8E1BC1ED1E49B1BB00F868C1 /* Control_BezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Control_BezierPath.m; sourceTree = "<group>"; };
+		8E1BC1EE1E49B1BB00F868C1 /* ControlBezierPlat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlBezierPlat.h; sourceTree = "<group>"; };
+		8E1BC1EF1E49B1BB00F868C1 /* ControlBezierPlat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlBezierPlat.m; sourceTree = "<group>"; };
+		8E1BC1F21E49B56500F868C1 /* FMYBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYBottomView.h; sourceTree = "<group>"; };
+		8E1BC1F31E49B56600F868C1 /* FMYBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYBottomView.m; sourceTree = "<group>"; };
+		8E1BC1F51E49BECE00F868C1 /* fmywplist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fmywplist.plist; sourceTree = "<group>"; };
 		8E2F0D161E35D63A000394D8 /* FMYRuntimePropertiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYRuntimePropertiesViewController.h; sourceTree = "<group>"; };
 		8E2F0D171E35D63A000394D8 /* FMYRuntimePropertiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYRuntimePropertiesViewController.m; sourceTree = "<group>"; };
 		8E2F0D191E35DE14000394D8 /* FMYChinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYChinese.h; sourceTree = "<group>"; };
@@ -193,13 +207,29 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		8E1BC1E81E49A56200F868C1 /* BezierView */ = {
+			isa = PBXGroup;
+			children = (
+				8E1BC1EC1E49B1BB00F868C1 /* Control_BezierPath.h */,
+				8E1BC1ED1E49B1BB00F868C1 /* Control_BezierPath.m */,
+				8E1BC1EE1E49B1BB00F868C1 /* ControlBezierPlat.h */,
+				8E1BC1EF1E49B1BB00F868C1 /* ControlBezierPlat.m */,
+				8E1BC1E91E49AEF100F868C1 /* FMYBezierViewController.h */,
+				8E1BC1EA1E49AEF100F868C1 /* FMYBezierViewController.m */,
+			);
+			path = BezierView;
+			sourceTree = "<group>";
+		};
 		8E2F0D241E375049000394D8 /* OC_UI */ = {
 			isa = PBXGroup;
 			children = (
+				8E1BC1E81E49A56200F868C1 /* BezierView */,
 				8E2F0D3D1E38B423000394D8 /* WebView */,
 				8E2F0D251E3750AB000394D8 /* Layout */,
 				8E2F0D261E3750EA000394D8 /* FMYUITableViewController.h */,
 				8E2F0D271E3750EA000394D8 /* FMYUITableViewController.m */,
+				8E1BC1F21E49B56500F868C1 /* FMYBottomView.h */,
+				8E1BC1F31E49B56600F868C1 /* FMYBottomView.m */,
 			);
 			path = OC_UI;
 			sourceTree = "<group>";
@@ -239,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				8E2F0D4E1E38BA50000394D8 /* data_xml */,
+				8E1BC1F51E49BECE00F868C1 /* fmywplist.plist */,
 			);
 			path = Datasources;
 			sourceTree = "<group>";
@@ -489,6 +520,7 @@
 				8E2F0D4B1E38B77F000394D8 /* uiweb.html in Resources */,
 				8E2F0D4C1E38B77F000394D8 /* mkweb.html in Resources */,
 				8EFE497B1E34B1BE00B2513A /* Assets.xcassets in Resources */,
+				8E1BC1F61E49BECE00F868C1 /* fmywplist.plist in Resources */,
 				8EFE49791E34B1BE00B2513A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,6 +580,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E1BC1EB1E49AEF100F868C1 /* FMYBezierViewController.m in Sources */,
 				8E2F0D211E36FA9B000394D8 /* NSObject+FMY.m in Sources */,
 				8EFE49BD1E34BB3000B2513A /* FMYPerson.m in Sources */,
 				8EFE49761E34B1BE00B2513A /* ViewController.m in Sources */,
@@ -568,6 +601,7 @@
 				8E2F0D1B1E35DE14000394D8 /* FMYChinese.m in Sources */,
 				8E1BC1E51E45B26A00F868C1 /* FMYDBManager.m in Sources */,
 				8E2F0D2D1E37634B000394D8 /* uiabout.md in Sources */,
+				8E1BC1F11E49B1BB00F868C1 /* ControlBezierPlat.m in Sources */,
 				8E1BC1D21E45AA0100F868C1 /* FMYOCBaseViewController.m in Sources */,
 				8E2F0D331E38861B000394D8 /* FMYRuntimeNormalCaseViewController.m in Sources */,
 				8EFE498E1E34B23B00B2513A /* FMYTableViewCell.m in Sources */,
@@ -577,9 +611,11 @@
 				8EFE499E1E34B2FD00B2513A /* FMYTabBarController.m in Sources */,
 				8E2F0D361E3899CA000394D8 /* FMYMovie.m in Sources */,
 				8EFE49B91E34BAD000B2513A /* NSString+CN.m in Sources */,
+				8E1BC1F41E49B56600F868C1 /* FMYBottomView.m in Sources */,
 				8EFE49731E34B1BE00B2513A /* AppDelegate.m in Sources */,
 				8E1BC1D91E45ABAD00F868C1 /* FMYSqliteViewController.m in Sources */,
 				8E2F0D461E38B66A000394D8 /* FMYUIWebViewController.m in Sources */,
+				8E1BC1F01E49B1BB00F868C1 /* Control_BezierPath.m in Sources */,
 				8E1BC1D61E45ABA000F868C1 /* FMYCoreDataViewController.m in Sources */,
 				8E2F0D301E384A1F000394D8 /* FMYRuntimeMsgSendViewController.m in Sources */,
 				8EFE49941E34B27000B2513A /* FMYButton.m in Sources */,

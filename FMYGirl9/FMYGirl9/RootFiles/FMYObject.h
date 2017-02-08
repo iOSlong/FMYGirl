@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "NSObject+FMY.h"
 
 @interface FMYObject : NSObject
 @property (nonatomic) NSString *fmy;

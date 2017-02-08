@@ -17,6 +17,7 @@ const char * makeDictCachePath(const char *fullNameSpace);
 + (NSString *)pathOfDatabase;
 
 
++ (NSArray *)fileGetNewsItems;
 
 
 @end

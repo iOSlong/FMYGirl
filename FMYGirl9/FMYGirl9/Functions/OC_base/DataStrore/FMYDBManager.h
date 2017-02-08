@@ -14,6 +14,9 @@
 
 //"create table if not exists list(id integer primary key autoincrement,name char,sex char)"
 //const char * createList_Data  = "create table if not exists list_data(id integer primary key autoincrement,desc txt, ID txt, data blob)";
+//const char *createSQL = "create table if not exists list_data(orderID integer primary key autoincrement, desc txt, ID text, data blob)";
+
+#define createSQL  @"create table if not exists list_data(orderID integer primary key autoincrement, ID text, desc txt, data blob)"
 
 
 @interface FMYDBManager : FMYObject {
@@ -21,5 +24,10 @@
 }
 
 + (FMYDBManager *)sharedDBmanager;
+
+- (BOOL)insert:(FMYObject *)obj ID:(NSString *)ID desc:(NSString *)desc;
+- (BOOL)remove:(FMYObject *)obj ID:(NSString *)ID desc:(NSString *)desc;
+- (NSArray *)getArrayBy:(NSDictionary *)queryInfo;
+
 
 @end

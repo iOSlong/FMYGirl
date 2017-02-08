@@ -48,7 +48,7 @@
 #define mySpanLeft      (10 * myRATIO)
 #define mySpanIn        (mySpanLeft/2)
 #define myDisplayW      (SCREENW - 2 * mySpanLeft)
-
+#define myDisplayH      (SCREENH - 2 * mySpanIn)
 
 
 

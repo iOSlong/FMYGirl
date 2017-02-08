@@ -26,7 +26,7 @@
 - (NSArray *)fmyProperties;
 + (NSArray *)fmyProperties;
 
-
+- (NSDictionary *)objToDict;
 // 字典转模型
 + (instancetype)objectWithDict:(NSDictionary *)dict;
 

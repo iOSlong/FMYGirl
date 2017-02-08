@@ -77,7 +77,19 @@
 }
 
 
-
+- (NSDictionary *)objToDict;
+{
+    NSArray *properties = [[self class] properties];
+    NSMutableDictionary *muDict = [NSMutableDictionary dictionary];
+    
+    for (NSDictionary *pro in properties) {
+        NSString *key = [[pro objectForKey:@"name"] substringFromIndex:1];
+        if ([self valueForKey:key]) {
+            [muDict setObject:[self valueForKey:key] forKey:key];
+        }
+    }
+    return muDict;
+}
 
 
 // 字典转模型
@@ -173,7 +185,6 @@
     
     // 返回对象
     return objc;
-    
 }
 
 

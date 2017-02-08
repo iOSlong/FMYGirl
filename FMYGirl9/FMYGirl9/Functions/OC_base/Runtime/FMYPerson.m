@@ -8,9 +8,28 @@
 
 #import "FMYPerson.h"
 
-@implementation FMYPerson
+@implementation FMYPerson {
+    NSArray *_nameArr;
+    NSArray *_sexArr;
+}
 
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _nameArr = @[@"马小欣",
+                     @"马左冰",
+                     @"木夕凤",
+                     @"夕林儿",
+                     @"王采薇",
+                     @"玉琼",
+                     @"瑶冰玲",
+                     @"舞心碟",@"兑小悉"];
+        
+        _sexArr = @[@"boy",@"girl"];
+    }
+    return self;
+}
 
 
 - (void)sayName;{
@@ -24,6 +43,17 @@
     }
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"person:%@, age:%@, ID:%@",self.name,self.age,self.ID];
+}
+
+- (void)randomValue {
+    self.name = [_nameArr objectAtIndex:arc4random()%_nameArr.count];
+    self.sex  = [_sexArr objectAtIndex:arc4random()%2];
+    self.ID   = [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970]];
+    self.age  = [NSNumber numberWithInteger:arc4random()%520 + 24];
+}
 
 
 @end

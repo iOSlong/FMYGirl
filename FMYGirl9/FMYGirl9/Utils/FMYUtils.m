@@ -39,5 +39,13 @@ const char * makeDictCachePath(const char *fullNameSpace)
 }
 
 
++ (NSArray *)fileGetNewsItems;
+{
+    NSDictionary *plist = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"fmywplist" ofType:@"plist"]];
+    NSArray *newsItems = [plist objectForKey:@"newsItem"];
+    return newsItems;
+}
+
+
 
 @end
