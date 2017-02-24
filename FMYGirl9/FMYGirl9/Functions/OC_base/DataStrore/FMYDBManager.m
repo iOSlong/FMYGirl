@@ -156,15 +156,27 @@
                 char *c_id      = (char *) sqlite3_column_text(stmt, 1);
                 char *c_desc    = (char *) sqlite3_column_text(stmt, 2);
                 
+                
+                NSString *ID    = [NSString stringWithUTF8String:c_id];
+                NSString *desc  = [NSString stringWithUTF8String:c_desc];
+                
+                
                 const void *c_blob = (char *) sqlite3_column_blob(stmt, 3);
                 int size = sqlite3_column_bytes(stmt, 3);
                 
                 NSData *data = [[NSData alloc] initWithBytes:c_blob length:size];
                 
                 NSError *error = nil;
-                NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
+                NSDictionary *dataD = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
                 
-                [muArr addObject:dict];
+                NSMutableDictionary *mudict = [NSMutableDictionary dictionary];
+                [mudict setObject:dataD?dataD:@{} forKey:@"data"];
+                [mudict setObject:ID?ID:@"" forKey:@"id"];
+                [mudict setObject:desc?desc:@"" forKey:@"desc"];
+                
+                
+                [muArr addObject:mudict];
+                
             }
         }else{
             NSLog(@"查询失败，%d", result);

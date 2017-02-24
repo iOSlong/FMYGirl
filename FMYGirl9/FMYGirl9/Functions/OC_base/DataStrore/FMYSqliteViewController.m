@@ -37,8 +37,6 @@
     [self.myperson randomValue];
     
     
-    [self reloadDataFromDB];
-    
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
