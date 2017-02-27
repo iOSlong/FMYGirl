@@ -101,6 +101,7 @@
     NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
     if (data) {
         NSString *insertSQL = [NSString stringWithFormat:@"insert into list_data(ID, desc, data)values(?, ?, ?)"];
+        
         if ([self dbOpen]) {
             sqlite3_stmt *stmt = nil;
             
@@ -115,12 +116,67 @@
             
             int result = sqlite3_step(stmt);
             
-            if (result != SQLITE_OK) {
+            if (result != SQLITE_DONE && result != SQLITE_OK) {
                 NSLog(@"添加失败，%d",result);
                 return NO;
             }
+            if ([self dbClose]) {
+                NSLog(@"close database");
+            }
         }
     }
+    return YES;
+
+}
+
+- (BOOL)insert:(NSArray<FMYObject *> *)array {
+    if (array == nil || array.count == 0) {
+        return NO;
+    }
+    if (![self dbOpen]) {
+        [self dbClose];
+        return NO;
+    }
+    
+    NSString *insertSQL = [NSString stringWithFormat:@"insert into list_data(ID, desc, data)values(?, ?, ?)"];
+    
+    sqlite3_exec(_database, "begin", 0, 0, 0);
+    sqlite3_stmt *stmt;
+    sqlite3_prepare_v2(_database, [insertSQL UTF8String], (int)strlen([insertSQL UTF8String]), &stmt, 0);
+    
+    for (FMYObject *obj in array) {
+        NSDictionary *dict = [obj objToDict];
+        NSLog(@"%@",dict);
+        NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
+        
+        NSString *ID = [dict objectForKey:@"ID"]?:@"";
+        NSString *desc = [obj description]?:@"";
+
+
+        sqlite3_reset(stmt);
+
+        sqlite3_bind_text(stmt, 1, [ID UTF8String], -1, NULL);
+        
+        sqlite3_bind_text(stmt, 2, [desc UTF8String], -1, NULL);
+        
+        sqlite3_bind_blob(stmt, 3, [data bytes], (int)[data length] , NULL);
+        
+        sqlite3_step(stmt);
+
+    }
+    
+    int result = sqlite3_finalize(stmt);
+    
+    result = sqlite3_exec(_database, "commit", 0, 0, 0);
+    
+    if (result != SQLITE_DONE && result != SQLITE_OK) {
+        NSLog(@"添加失败，%d",result);
+        return NO;
+    }
+    if ([self dbClose]) {
+        NSLog(@"close database");
+    }
+    
     return YES;
 }
 
@@ -138,6 +194,7 @@
                 return NO;
             }
         }
+        [self dbClose];
     }
     return YES;
 }

@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _excArray = @[@"增",@"删",@"改",@"查"];
+    _excArray = @[@"增",@"删",@"改",@"查",@"批量增加"];
     _sqlArray = [NSMutableArray array];
 
     _DBM = [FMYDBManager sharedDBmanager];
@@ -36,6 +36,8 @@
     self.myperson = [FMYPerson new];
     [self.myperson randomValue];
     
+    
+    [self reloadDataFromDB];
     
 }
 
@@ -99,6 +101,9 @@
         }else if (indexPath.row == 1) {
             [_DBM remove:_sqlArray.firstObject ID:nil desc:nil];
             [self reloadDataFromDB];
+        }else if (indexPath.row == 4) {
+            [_DBM insert:_sqlArray];
+            [self reloadDataFromDB];
         }
     }
 }
@@ -110,7 +115,7 @@
     NSLog(@"%@",sqlArr);
     [_sqlArray removeAllObjects];
     for (NSDictionary *dict in sqlArr) {
-        FMYPerson *person = [FMYPerson objectWithDict:dict];
+        FMYPerson *person = [FMYPerson objectWithDict:[dict objectForKey:@"data"]];
         [_sqlArray addObject:person];
     }
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];

@@ -26,6 +26,7 @@
 + (FMYDBManager *)sharedDBmanager;
 
 - (BOOL)insert:(FMYObject *)obj ID:(NSString *)ID desc:(NSString *)desc;
+- (BOOL)insert:(NSArray<FMYObject *> * )array;
 - (BOOL)remove:(FMYObject *)obj ID:(NSString *)ID desc:(NSString *)desc;
 - (NSArray *)getArrayBy:(NSDictionary *)queryInfo;
 
