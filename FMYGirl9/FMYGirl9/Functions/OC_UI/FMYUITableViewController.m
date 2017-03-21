@@ -12,6 +12,7 @@
 #import "FMYMKWebViewController.h"
 #import "FMYUIWebViewController.h"
 #import "FMYBezierViewController.h"
+#import "FMYBannersTableViewController.h"
 
 @interface FMYUITableViewController ()
 
@@ -25,7 +26,7 @@
     [self.arrDataSource addObject:@"MKWebView - JS"];
     [self.arrDataSource addObject:@"UIWebView - JS"];
     [self.arrDataSource addObject:@"Bezier —— View"];
-
+    [self.arrDataSource addObject:@"FocusBanner —— View"];
 }
 
 
@@ -51,6 +52,11 @@
     {
         FMYBezierViewController *bezierVC = [FMYBezierViewController new];
         desVC = bezierVC;
+    }
+    else if (indexPath.row == 4)
+    {
+        FMYBannersTableViewController *banner = [[FMYBannersTableViewController alloc] init];
+        desVC = banner;
     }
     [self.navigationController pushViewController:desVC animated:YES];
 }

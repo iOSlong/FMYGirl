@@ -8,7 +8,8 @@ target 'FMYGirl9' do
   # Pods for FMYGirl9
 
    pod 'MBProgressHUD', '~> 1.0.0'
-
+   pod 'SDWebImage', '~> 4.0.0'
+	
 
 
 

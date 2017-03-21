@@ -38,6 +38,8 @@
 		8E2F0D4B1E38B77F000394D8 /* uiweb.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E2F0D491E38B77F000394D8 /* uiweb.html */; };
 		8E2F0D4C1E38B77F000394D8 /* mkweb.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E2F0D4A1E38B77F000394D8 /* mkweb.html */; };
 		8E2F0D4F1E38BA50000394D8 /* data_xml in Resources */ = {isa = PBXBuildFile; fileRef = 8E2F0D4E1E38BA50000394D8 /* data_xml */; };
+		8EB295AF1E81082A00EF936B /* FMYBannersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB295AE1E81082A00EF936B /* FMYBannersTableViewController.m */; };
+		8EB295B21E81163E00EF936B /* FMYBannnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB295B11E81163E00EF936B /* FMYBannnerView.m */; };
 		8EFE49701E34B1BE00B2513A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE496F1E34B1BE00B2513A /* main.m */; };
 		8EFE49731E34B1BE00B2513A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE49721E34B1BE00B2513A /* AppDelegate.m */; };
 		8EFE49761E34B1BE00B2513A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE49751E34B1BE00B2513A /* ViewController.m */; };
@@ -117,6 +119,10 @@
 		8E2F0D491E38B77F000394D8 /* uiweb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = uiweb.html; sourceTree = "<group>"; };
 		8E2F0D4A1E38B77F000394D8 /* mkweb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mkweb.html; sourceTree = "<group>"; };
 		8E2F0D4E1E38BA50000394D8 /* data_xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = data_xml; sourceTree = "<group>"; };
+		8EB295AD1E81082A00EF936B /* FMYBannersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYBannersTableViewController.h; sourceTree = "<group>"; };
+		8EB295AE1E81082A00EF936B /* FMYBannersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYBannersTableViewController.m; sourceTree = "<group>"; };
+		8EB295B01E81163E00EF936B /* FMYBannnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYBannnerView.h; sourceTree = "<group>"; };
+		8EB295B11E81163E00EF936B /* FMYBannnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYBannnerView.m; sourceTree = "<group>"; };
 		8EFE496B1E34B1BE00B2513A /* FMYGirl9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMYGirl9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFE496F1E34B1BE00B2513A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8EFE49711E34B1BE00B2513A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -226,8 +232,9 @@
 				8E1BC1E81E49A56200F868C1 /* BezierView */,
 				8E2F0D3D1E38B423000394D8 /* WebView */,
 				8E2F0D251E3750AB000394D8 /* Layout */,
-				8E2F0D261E3750EA000394D8 /* FMYUITableViewController.h */,
+				8EB295AC1E8107A300EF936B /* Banners */,
 				8E2F0D271E3750EA000394D8 /* FMYUITableViewController.m */,
+				8E2F0D261E3750EA000394D8 /* FMYUITableViewController.h */,
 				8E1BC1F21E49B56500F868C1 /* FMYBottomView.h */,
 				8E1BC1F31E49B56600F868C1 /* FMYBottomView.m */,
 			);
@@ -272,6 +279,17 @@
 				8E1BC1F51E49BECE00F868C1 /* fmywplist.plist */,
 			);
 			path = Datasources;
+			sourceTree = "<group>";
+		};
+		8EB295AC1E8107A300EF936B /* Banners */ = {
+			isa = PBXGroup;
+			children = (
+				8EB295AD1E81082A00EF936B /* FMYBannersTableViewController.h */,
+				8EB295AE1E81082A00EF936B /* FMYBannersTableViewController.m */,
+				8EB295B01E81163E00EF936B /* FMYBannnerView.h */,
+				8EB295B11E81163E00EF936B /* FMYBannnerView.m */,
+			);
+			path = Banners;
 			sourceTree = "<group>";
 		};
 		8EFE49621E34B1BE00B2513A = {
@@ -594,8 +612,10 @@
 				8EFE49911E34B25300B2513A /* FMYTableView.m in Sources */,
 				8EFE49971E34B27F00B2513A /* FMYLabel.m in Sources */,
 				8EFE499B1E34B2E400B2513A /* FMYNavigationController.m in Sources */,
+				8EB295AF1E81082A00EF936B /* FMYBannersTableViewController.m in Sources */,
 				8E2F0D401E38B49E000394D8 /* FMYMKWebViewController.m in Sources */,
 				8E1BC1E21E45AEA200F868C1 /* FMYUtils.m in Sources */,
+				8EB295B21E81163E00EF936B /* FMYBannnerView.m in Sources */,
 				8E2F0D431E38B4CE000394D8 /* WeakDelegate.m in Sources */,
 				8E2F0D2B1E37515A000394D8 /* FMYLayoutConstraintViewController.m in Sources */,
 				8E2F0D1B1E35DE14000394D8 /* FMYChinese.m in Sources */,
