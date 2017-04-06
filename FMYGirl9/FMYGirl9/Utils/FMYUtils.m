@@ -47,13 +47,51 @@ const char * makeDictCachePath(const char *fullNameSpace)
 }
 
 + (CGSize)sizeFrom:(UIFont *)font andStr:(NSString *)string limitW:(CGFloat)width {
-    NSDictionary *attributes = @{NSFontAttributeName:font};
+    
+    NSDictionary *attributes = [FMYUtils defaultTextAttributes];
+    
     CGSize size = [string boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
     return size;
 }
 
++ (NSAttributedString *)showAttributedFrom:(NSString *)string {
 
+    NSAttributedString *attributeStr = [[NSAttributedString alloc] initWithString:string attributes:[FMYUtils defaultTextAttributes]];
+    return attributeStr;
+}
 
++ (NSAttributedString *)attributedString:(NSString *)string font:(UIFont *)font paraStyle:(NSParagraphStyle *)style kern:(NSNumber *)kern {
+    if (!style) {
+        style = [NSParagraphStyle defaultParagraphStyle];
+    }
+    NSDictionary *attributes = @{NSFontAttributeName:font,
+                                 NSParagraphStyleAttributeName:style,
+                                 NSKernAttributeName:@1.5f
+                                 };
+    NSAttributedString *attributeStr = [[NSAttributedString alloc] initWithString:string attributes:attributes];
+    
+    return attributeStr;
+}
+
++ (NSDictionary *)defaultTextAttributes;
+{
+    static NSDictionary *attributes;
+    NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
+    paraStyle.lineBreakMode = NSLineBreakByCharWrapping;
+    paraStyle.alignment = NSTextAlignmentLeft;
+    paraStyle.lineSpacing = 22; //行间距
+    paraStyle.hyphenationFactor = 1.0;
+    paraStyle.firstLineHeadIndent = 0.0;
+    paraStyle.paragraphSpacingBefore = 0.0;
+    paraStyle.headIndent = 0;
+    paraStyle.tailIndent = 0;
+    //字间距 NSKernAttributeName:@1.5f
+    attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:13],
+                   NSParagraphStyleAttributeName:paraStyle,
+                   NSKernAttributeName:@1.5f
+                   };
+    return attributes;
+}
 
 @end
 

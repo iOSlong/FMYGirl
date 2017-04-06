@@ -21,4 +21,9 @@ const char * makeDictCachePath(const char *fullNameSpace);
 
 + (CGSize)sizeFrom:(UIFont *)font andStr:(NSString *)string limitW:(CGFloat)width;
 
++ (NSDictionary *)defaultTextAttributes;
+
++ (NSAttributedString *)showAttributedFrom:(NSString *)string;
+
+
 @end

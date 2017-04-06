@@ -8,6 +8,38 @@
 
 #import <UIKit/UIKit.h>
 
+
+typedef NS_ENUM(NSUInteger, DQDetailEvent) {
+    DQDetailEventFaverClick,
+    DQDetailEventShareClick,
+    DQDetailEventDownloadClick,
+    DQDetailEventSiteClick,
+    DQDetailEventNone,
+};
+
+typedef void(^DQDetailBarBlock)(DQDetailEvent event);
+
+
+
+
+
+@interface DQSiteView : UIView
+@property (nonatomic, strong) UIImageView   *imgvSiteIcon;
+@property (nonatomic, strong) UILabel       *labelSite;
+@property (nonatomic, strong) UIImageView   *imgvSiteAccessory;
+
+@property (nonatomic, strong) NSString *siteInfo;
+@end
+
+
+
+
+
 @interface FMYDetailBarView : UIView
+
+@property (nonatomic, copy, readonly)DQDetailBarBlock detailBarBlock;
+
+- (void)detailBarEvent:(DQDetailBarBlock)thisBlock;
+
 
 @end

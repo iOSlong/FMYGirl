@@ -57,6 +57,8 @@
 		8EE66CB41E95E32100E56AFD /* FMYCoreTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CB31E95E32100E56AFD /* FMYCoreTextViewController.m */; };
 		8EE66CB71E95E3AC00E56AFD /* FMYCoreTextShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CB61E95E3AC00E56AFD /* FMYCoreTextShowViewController.m */; };
 		8EE66CBA1E95E41B00E56AFD /* FMYCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CB91E95E41B00E56AFD /* FMYCoreTextView.m */; };
+		8EE66CBE1E96177800E56AFD /* FMYButton+FMY.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CBD1E96177800E56AFD /* FMYButton+FMY.m */; };
+		8EE66CC11E96226C00E56AFD /* ysdqimgIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EE66CC01E96226C00E56AFD /* ysdqimgIcon.xcassets */; };
 		8EFE49701E34B1BE00B2513A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE496F1E34B1BE00B2513A /* main.m */; };
 		8EFE49731E34B1BE00B2513A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE49721E34B1BE00B2513A /* AppDelegate.m */; };
 		8EFE49761E34B1BE00B2513A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE49751E34B1BE00B2513A /* ViewController.m */; };
@@ -171,6 +173,9 @@
 		8EE66CB61E95E3AC00E56AFD /* FMYCoreTextShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYCoreTextShowViewController.m; sourceTree = "<group>"; };
 		8EE66CB81E95E41B00E56AFD /* FMYCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYCoreTextView.h; sourceTree = "<group>"; };
 		8EE66CB91E95E41B00E56AFD /* FMYCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYCoreTextView.m; sourceTree = "<group>"; };
+		8EE66CBC1E96177800E56AFD /* FMYButton+FMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMYButton+FMY.h"; sourceTree = "<group>"; };
+		8EE66CBD1E96177800E56AFD /* FMYButton+FMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMYButton+FMY.m"; sourceTree = "<group>"; };
+		8EE66CC01E96226C00E56AFD /* ysdqimgIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ysdqimgIcon.xcassets; sourceTree = "<group>"; };
 		8EFE496B1E34B1BE00B2513A /* FMYGirl9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMYGirl9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFE496F1E34B1BE00B2513A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8EFE49711E34B1BE00B2513A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -417,6 +422,15 @@
 			path = CoreText;
 			sourceTree = "<group>";
 		};
+		8EE66CBB1E96173300E56AFD /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+				8EE66CBC1E96177800E56AFD /* FMYButton+FMY.h */,
+				8EE66CBD1E96177800E56AFD /* FMYButton+FMY.m */,
+			);
+			path = Categorys;
+			sourceTree = "<group>";
+		};
 		8EFE49621E34B1BE00B2513A = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +452,7 @@
 		8EFE496D1E34B1BE00B2513A /* FMYGirl9 */ = {
 			isa = PBXGroup;
 			children = (
+				8EE66CBB1E96173300E56AFD /* Categorys */,
 				8E1BC1DF1E45AE2D00F868C1 /* Utils */,
 				8EFE49AC1E34B6F600B2513A /* Constants */,
 				8EFE49A71E34B45E00B2513A /* Scources */,
@@ -537,6 +552,7 @@
 		8EFE49AB1E34B4E400B2513A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8EE66CC01E96226C00E56AFD /* ysdqimgIcon.xcassets */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -670,6 +686,7 @@
 				8EFE497B1E34B1BE00B2513A /* Assets.xcassets in Resources */,
 				8E1BC1F61E49BECE00F868C1 /* fmywplist.plist in Resources */,
 				8EFE49791E34B1BE00B2513A /* Main.storyboard in Resources */,
+				8EE66CC11E96226C00E56AFD /* ysdqimgIcon.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,6 +790,7 @@
 				8EE66C8B1E8CE47600E56AFD /* FMYCollectionReusableView.m in Sources */,
 				8E1BC1F41E49B56600F868C1 /* FMYBottomView.m in Sources */,
 				8EFE49731E34B1BE00B2513A /* AppDelegate.m in Sources */,
+				8EE66CBE1E96177800E56AFD /* FMYButton+FMY.m in Sources */,
 				8E1BC1D91E45ABAD00F868C1 /* FMYSqliteViewController.m in Sources */,
 				8E2F0D461E38B66A000394D8 /* FMYUIWebViewController.m in Sources */,
 				8E1BC1F01E49B1BB00F868C1 /* Control_BezierPath.m in Sources */,

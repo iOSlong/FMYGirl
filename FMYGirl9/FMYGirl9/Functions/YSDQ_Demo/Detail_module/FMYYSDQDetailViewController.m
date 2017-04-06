@@ -12,6 +12,8 @@
 #import "FMYDetailBarView.h"
 #import "FMYYSDQDetailInfoCell.h"
 
+
+
 @interface FMYYSDQDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UIView *playerContainerView;
@@ -23,7 +25,9 @@
 
 @end
 
-@implementation FMYYSDQDetailViewController
+@implementation FMYYSDQDetailViewController {
+    DQModel *_model;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,6 +38,11 @@
     
     
     [self configureAccessoryViews];
+    
+    _model = [DQModel new];
+    _model.showInfo = testString;
+    
+    [self.tableView reloadData];
 }
 
 - (void)configureContainerView {
@@ -83,34 +92,47 @@
 
 - (void)configureAccessoryViews {
     self.tableView.tableHeaderView = self.barView;
+    [self.barView detailBarEvent:^(DQDetailEvent event) {
+        NSLog(@"%lu",(unsigned long)event);
+    }];
 }
 
 
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 6;
 }
 - (FMYTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellID = @"ysdqCellID";
     FMYTableViewCell *cell  = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (!cell) {
-        cell = [[FMYTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-    }
+
     if (indexPath.row == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([FMYYSDQDetailInfoCell class])];
-        
-        ((FMYYSDQDetailInfoCell *)cell).model = testString;
+        weakSelf();
+        [((FMYYSDQDetailInfoCell *)cell) cellEvent:^(BOOL show) {
+            strongSelf();
+            _model.show = show;
+            [strongSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }];
+        ((FMYYSDQDetailInfoCell *)cell).model = _model;
     }
     
+    if (!cell) {
+        cell = [[FMYTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell.textLabel.text = @"hello world!";
+    }
+    
+    cell.backgroundColor = [UIColor whiteColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        return [FMYYSDQDetailInfoCell cellHeightWithModel:testString];
+        return [FMYYSDQDetailInfoCell cellHeightWithModel:_model];
     }
-    return 40;
+    return 60;
 }
 
 
