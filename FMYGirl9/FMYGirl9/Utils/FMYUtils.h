@@ -19,5 +19,6 @@ const char * makeDictCachePath(const char *fullNameSpace);
 
 + (NSArray *)fileGetNewsItems;
 
++ (CGSize)sizeFrom:(UIFont *)font andStr:(NSString *)string limitW:(CGFloat)width;
 
 @end

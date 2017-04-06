@@ -46,6 +46,17 @@ const char * makeDictCachePath(const char *fullNameSpace)
     return newsItems;
 }
 
++ (CGSize)sizeFrom:(UIFont *)font andStr:(NSString *)string limitW:(CGFloat)width {
+    NSDictionary *attributes = @{NSFontAttributeName:font};
+    CGSize size = [string boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
+    return size;
+}
+
+
 
 
 @end
+
+
+
+

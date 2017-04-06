@@ -18,4 +18,14 @@
 }
 */
 
+
+- (BOOL)allowsHeaderViewsToFloat {
+    return NO;
+}
+
+- (BOOL)allowsFooterViewsToFloat {
+    return NO;
+}
+
+
 @end

@@ -12,7 +12,11 @@
 
 #import "FMYUITableViewController.h"
 #import "FMYOCBaseViewController.h"
+#import "FMYMediaViewController.h"
+#import "FMYYSDQViewController.h"
 
+#import <NetworkExtension/NEHotspotHelper.h>
+#import <SystemConfiguration/CaptiveNetwork.h>
 
 @interface AppDelegate ()
 
@@ -20,6 +24,41 @@
 
 @implementation AppDelegate
 
+- (NSDictionary *)ssidInfo {
+    NSString *ssid = @"Not Found";
+    NSString *macIp = @"Not Found";
+    CFArrayRef myArray = CNCopySupportedInterfaces();
+    if (myArray != nil) {
+        CFDictionaryRef myDict = CNCopyCurrentNetworkInfo(CFArrayGetValueAtIndex(myArray, 0));
+        if (myDict != nil) {
+            NSDictionary *dict = (NSDictionary*)CFBridgingRelease(myDict);
+            
+            ssid = [dict valueForKey:@"SSID"];
+            macIp = [dict valueForKey:@"BSSID"];
+        }
+    }
+    return nil;
+}
+
+- (NSDictionary*)SSIDInfo {
+    NSArray *ifs = (__bridge_transfer NSArray *)CNCopySupportedInterfaces();
+    
+    NSDictionary *info = nil;
+    
+    for (NSString *ifnam in ifs) {
+        
+        info = (__bridge_transfer NSDictionary *)CNCopyCurrentNetworkInfo((__bridge CFStringRef)ifnam);
+        
+        if (info && [info count]) {
+            
+            break;
+            
+        }
+        
+    }
+    
+    return info;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -28,18 +67,33 @@
     
     FMYOCBaseViewController     *baseVC = [FMYOCBaseViewController new];
     
+    FMYMediaViewController      *mediaVC= [FMYMediaViewController new];
+    
+    FMYYSDQViewController       *ysdqVC = [FMYYSDQViewController new];
+    
     FMYNavigationController *navBase    = [[FMYNavigationController alloc] initWithRootViewController:baseVC];
     FMYNavigationController *navUI      = [[FMYNavigationController alloc] initWithRootViewController:uiVC];
-    
+    FMYNavigationController *navMedia   = [[FMYNavigationController alloc] initWithRootViewController:mediaVC];
+    FMYNavigationController *navYsdq    = [[FMYNavigationController alloc] initWithRootViewController:ysdqVC];
+
     uiVC.title      = @"UI";
     navUI.title     = @"UI";
     baseVC.title    = @"OCBase";
     navBase.title   = @"OCInfo";
     
+    mediaVC.title   = @"media";
+    navMedia.title  = @"media";
+    
+    ysdqVC.title    = @"YSDQ";
+    navYsdq.title   = @"YSDQ";
+    
+    
+    [self ssidInfo];
+    [self SSIDInfo];
     
     
     FMYTabBarController *tabC = [[FMYTabBarController alloc] init];
-    tabC.viewControllers = @[navUI,navBase];
+    tabC.viewControllers = @[navUI,navBase,navMedia,navYsdq];
     
     
     self.window.rootViewController = tabC;

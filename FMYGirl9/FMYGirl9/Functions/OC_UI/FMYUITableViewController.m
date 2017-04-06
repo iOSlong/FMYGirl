@@ -13,6 +13,8 @@
 #import "FMYUIWebViewController.h"
 #import "FMYBezierViewController.h"
 #import "FMYBannersTableViewController.h"
+#import "FMYTableListViewController.h"
+#import "FMYCoreTextViewController.h"
 
 @interface FMYUITableViewController ()
 
@@ -27,6 +29,8 @@
     [self.arrDataSource addObject:@"UIWebView - JS"];
     [self.arrDataSource addObject:@"Bezier —— View"];
     [self.arrDataSource addObject:@"FocusBanner —— View"];
+    [self.arrDataSource addObject:@"UITableView"];
+    [self.arrDataSource addObject:@"CoreText"];
 }
 
 
@@ -58,6 +62,17 @@
         FMYBannersTableViewController *banner = [[FMYBannersTableViewController alloc] init];
         desVC = banner;
     }
+    else if (indexPath.row == 5)
+    {
+        FMYTableListViewController *tableVC = [[FMYTableListViewController alloc] init];
+        desVC = tableVC;
+    }
+    else if (indexPath.row == 6)
+    {
+        FMYCoreTextViewController *coreTextVC = [FMYCoreTextViewController new];
+        desVC = coreTextVC;
+    }
+    desVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:desVC animated:YES];
 }
 

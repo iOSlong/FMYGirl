@@ -8,6 +8,7 @@
 
 #import "FMYTableViewCell.h"
 
+
 @implementation FMYTableViewCell
 
 - (void)awakeFromNib {

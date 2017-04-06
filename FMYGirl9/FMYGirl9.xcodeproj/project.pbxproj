@@ -40,6 +40,23 @@
 		8E2F0D4F1E38BA50000394D8 /* data_xml in Resources */ = {isa = PBXBuildFile; fileRef = 8E2F0D4E1E38BA50000394D8 /* data_xml */; };
 		8EB295AF1E81082A00EF936B /* FMYBannersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB295AE1E81082A00EF936B /* FMYBannersTableViewController.m */; };
 		8EB295B21E81163E00EF936B /* FMYBannnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB295B11E81163E00EF936B /* FMYBannnerView.m */; };
+		8EB295BD1E8367B900EF936B /* FMYTableListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB295BC1E8367B900EF936B /* FMYTableListViewController.m */; };
+		8EB295C01E8367F000EF936B /* FMYTableScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB295BF1E8367F000EF936B /* FMYTableScrollViewController.m */; };
+		8EB295DA1E8A376400EF936B /* FMYCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB295D91E8A376400EF936B /* FMYCollectionViewController.m */; };
+		8EB295DE1E8BA64800EF936B /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB295DD1E8BA64800EF936B /* NetworkExtension.framework */; };
+		8EB295E01E8BA72600EF936B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB295DF1E8BA72600EF936B /* SystemConfiguration.framework */; };
+		8EE66C851E8CAD7400E56AFD /* FMYCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66C841E8CAD7400E56AFD /* FMYCollectionViewCell.m */; };
+		8EE66C8B1E8CE47600E56AFD /* FMYCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66C8A1E8CE47600E56AFD /* FMYCollectionReusableView.m */; };
+		8EE66C921E8F891200E56AFD /* FMYMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66C911E8F891200E56AFD /* FMYMediaViewController.m */; };
+		8EE66C961E8F89D900E56AFD /* FMYAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66C951E8F89D900E56AFD /* FMYAVPlayerViewController.m */; };
+		8EE66C981E8F8BD500E56AFD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE66C971E8F8BD500E56AFD /* AVFoundation.framework */; };
+		8EE66CA61E94CEF800E56AFD /* FMYYSDQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CA51E94CEF800E56AFD /* FMYYSDQViewController.m */; };
+		8EE66CAA1E94CF5100E56AFD /* FMYYSDQDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CA91E94CF5100E56AFD /* FMYYSDQDetailViewController.m */; };
+		8EE66CAD1E94E20800E56AFD /* FMYDetailBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CAC1E94E20800E56AFD /* FMYDetailBarView.m */; };
+		8EE66CB01E94E70000E56AFD /* FMYYSDQDetailInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CAF1E94E70000E56AFD /* FMYYSDQDetailInfoCell.m */; };
+		8EE66CB41E95E32100E56AFD /* FMYCoreTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CB31E95E32100E56AFD /* FMYCoreTextViewController.m */; };
+		8EE66CB71E95E3AC00E56AFD /* FMYCoreTextShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CB61E95E3AC00E56AFD /* FMYCoreTextShowViewController.m */; };
+		8EE66CBA1E95E41B00E56AFD /* FMYCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CB91E95E41B00E56AFD /* FMYCoreTextView.m */; };
 		8EFE49701E34B1BE00B2513A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE496F1E34B1BE00B2513A /* main.m */; };
 		8EFE49731E34B1BE00B2513A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE49721E34B1BE00B2513A /* AppDelegate.m */; };
 		8EFE49761E34B1BE00B2513A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE49751E34B1BE00B2513A /* ViewController.m */; };
@@ -123,6 +140,37 @@
 		8EB295AE1E81082A00EF936B /* FMYBannersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYBannersTableViewController.m; sourceTree = "<group>"; };
 		8EB295B01E81163E00EF936B /* FMYBannnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYBannnerView.h; sourceTree = "<group>"; };
 		8EB295B11E81163E00EF936B /* FMYBannnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYBannnerView.m; sourceTree = "<group>"; };
+		8EB295BB1E8367B900EF936B /* FMYTableListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYTableListViewController.h; sourceTree = "<group>"; };
+		8EB295BC1E8367B900EF936B /* FMYTableListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYTableListViewController.m; sourceTree = "<group>"; };
+		8EB295BE1E8367F000EF936B /* FMYTableScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYTableScrollViewController.h; sourceTree = "<group>"; };
+		8EB295BF1E8367F000EF936B /* FMYTableScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYTableScrollViewController.m; sourceTree = "<group>"; };
+		8EB295D81E8A376400EF936B /* FMYCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYCollectionViewController.h; sourceTree = "<group>"; };
+		8EB295D91E8A376400EF936B /* FMYCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYCollectionViewController.m; sourceTree = "<group>"; };
+		8EB295DD1E8BA64800EF936B /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		8EB295DF1E8BA72600EF936B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8EE66C831E8CAD7400E56AFD /* FMYCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYCollectionViewCell.h; sourceTree = "<group>"; };
+		8EE66C841E8CAD7400E56AFD /* FMYCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYCollectionViewCell.m; sourceTree = "<group>"; };
+		8EE66C891E8CE47600E56AFD /* FMYCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYCollectionReusableView.h; sourceTree = "<group>"; };
+		8EE66C8A1E8CE47600E56AFD /* FMYCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYCollectionReusableView.m; sourceTree = "<group>"; };
+		8EE66C901E8F891200E56AFD /* FMYMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYMediaViewController.h; sourceTree = "<group>"; };
+		8EE66C911E8F891200E56AFD /* FMYMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYMediaViewController.m; sourceTree = "<group>"; };
+		8EE66C941E8F89D900E56AFD /* FMYAVPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYAVPlayerViewController.h; sourceTree = "<group>"; };
+		8EE66C951E8F89D900E56AFD /* FMYAVPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYAVPlayerViewController.m; sourceTree = "<group>"; };
+		8EE66C971E8F8BD500E56AFD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8EE66CA41E94CEF800E56AFD /* FMYYSDQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYYSDQViewController.h; sourceTree = "<group>"; };
+		8EE66CA51E94CEF800E56AFD /* FMYYSDQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYYSDQViewController.m; sourceTree = "<group>"; };
+		8EE66CA81E94CF5100E56AFD /* FMYYSDQDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYYSDQDetailViewController.h; sourceTree = "<group>"; };
+		8EE66CA91E94CF5100E56AFD /* FMYYSDQDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYYSDQDetailViewController.m; sourceTree = "<group>"; };
+		8EE66CAB1E94E20800E56AFD /* FMYDetailBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYDetailBarView.h; sourceTree = "<group>"; };
+		8EE66CAC1E94E20800E56AFD /* FMYDetailBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYDetailBarView.m; sourceTree = "<group>"; };
+		8EE66CAE1E94E70000E56AFD /* FMYYSDQDetailInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYYSDQDetailInfoCell.h; sourceTree = "<group>"; };
+		8EE66CAF1E94E70000E56AFD /* FMYYSDQDetailInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYYSDQDetailInfoCell.m; sourceTree = "<group>"; };
+		8EE66CB21E95E32100E56AFD /* FMYCoreTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYCoreTextViewController.h; sourceTree = "<group>"; };
+		8EE66CB31E95E32100E56AFD /* FMYCoreTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYCoreTextViewController.m; sourceTree = "<group>"; };
+		8EE66CB51E95E3AC00E56AFD /* FMYCoreTextShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYCoreTextShowViewController.h; sourceTree = "<group>"; };
+		8EE66CB61E95E3AC00E56AFD /* FMYCoreTextShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYCoreTextShowViewController.m; sourceTree = "<group>"; };
+		8EE66CB81E95E41B00E56AFD /* FMYCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYCoreTextView.h; sourceTree = "<group>"; };
+		8EE66CB91E95E41B00E56AFD /* FMYCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYCoreTextView.m; sourceTree = "<group>"; };
 		8EFE496B1E34B1BE00B2513A /* FMYGirl9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMYGirl9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFE496F1E34B1BE00B2513A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8EFE49711E34B1BE00B2513A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -172,6 +220,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EE66C981E8F8BD500E56AFD /* AVFoundation.framework in Frameworks */,
+				8EB295E01E8BA72600EF936B /* SystemConfiguration.framework in Frameworks */,
+				8EB295DE1E8BA64800EF936B /* NetworkExtension.framework in Frameworks */,
 				8E1BC1E71E45B9EA00F868C1 /* libsqlite3.tbd in Frameworks */,
 				7E5CDA11A8AF9676363B4859 /* libPods-FMYGirl9.a in Frameworks */,
 			);
@@ -229,6 +280,8 @@
 		8E2F0D241E375049000394D8 /* OC_UI */ = {
 			isa = PBXGroup;
 			children = (
+				8EE66CB11E95E2F800E56AFD /* CoreText */,
+				8EB295BA1E83675700EF936B /* Tables */,
 				8E1BC1E81E49A56200F868C1 /* BezierView */,
 				8E2F0D3D1E38B423000394D8 /* WebView */,
 				8E2F0D251E3750AB000394D8 /* Layout */,
@@ -290,6 +343,78 @@
 				8EB295B11E81163E00EF936B /* FMYBannnerView.m */,
 			);
 			path = Banners;
+			sourceTree = "<group>";
+		};
+		8EB295BA1E83675700EF936B /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				8EB295BB1E8367B900EF936B /* FMYTableListViewController.h */,
+				8EB295BC1E8367B900EF936B /* FMYTableListViewController.m */,
+				8EB295BE1E8367F000EF936B /* FMYTableScrollViewController.h */,
+				8EB295BF1E8367F000EF936B /* FMYTableScrollViewController.m */,
+				8EB295D81E8A376400EF936B /* FMYCollectionViewController.h */,
+				8EB295D91E8A376400EF936B /* FMYCollectionViewController.m */,
+				8EE66C831E8CAD7400E56AFD /* FMYCollectionViewCell.h */,
+				8EE66C841E8CAD7400E56AFD /* FMYCollectionViewCell.m */,
+				8EE66C891E8CE47600E56AFD /* FMYCollectionReusableView.h */,
+				8EE66C8A1E8CE47600E56AFD /* FMYCollectionReusableView.m */,
+			);
+			path = Tables;
+			sourceTree = "<group>";
+		};
+		8EE66C8F1E8F88A600E56AFD /* OC_Media */ = {
+			isa = PBXGroup;
+			children = (
+				8EE66C931E8F898F00E56AFD /* AVFoundation */,
+				8EE66C901E8F891200E56AFD /* FMYMediaViewController.h */,
+				8EE66C911E8F891200E56AFD /* FMYMediaViewController.m */,
+			);
+			path = OC_Media;
+			sourceTree = "<group>";
+		};
+		8EE66C931E8F898F00E56AFD /* AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				8EE66C941E8F89D900E56AFD /* FMYAVPlayerViewController.h */,
+				8EE66C951E8F89D900E56AFD /* FMYAVPlayerViewController.m */,
+			);
+			path = AVFoundation;
+			sourceTree = "<group>";
+		};
+		8EE66CA31E94CEA800E56AFD /* YSDQ_Demo */ = {
+			isa = PBXGroup;
+			children = (
+				8EE66CA71E94CF0700E56AFD /* Detail_module */,
+				8EE66CA41E94CEF800E56AFD /* FMYYSDQViewController.h */,
+				8EE66CA51E94CEF800E56AFD /* FMYYSDQViewController.m */,
+			);
+			path = YSDQ_Demo;
+			sourceTree = "<group>";
+		};
+		8EE66CA71E94CF0700E56AFD /* Detail_module */ = {
+			isa = PBXGroup;
+			children = (
+				8EE66CA81E94CF5100E56AFD /* FMYYSDQDetailViewController.h */,
+				8EE66CA91E94CF5100E56AFD /* FMYYSDQDetailViewController.m */,
+				8EE66CAB1E94E20800E56AFD /* FMYDetailBarView.h */,
+				8EE66CAC1E94E20800E56AFD /* FMYDetailBarView.m */,
+				8EE66CAE1E94E70000E56AFD /* FMYYSDQDetailInfoCell.h */,
+				8EE66CAF1E94E70000E56AFD /* FMYYSDQDetailInfoCell.m */,
+			);
+			path = Detail_module;
+			sourceTree = "<group>";
+		};
+		8EE66CB11E95E2F800E56AFD /* CoreText */ = {
+			isa = PBXGroup;
+			children = (
+				8EE66CB21E95E32100E56AFD /* FMYCoreTextViewController.h */,
+				8EE66CB31E95E32100E56AFD /* FMYCoreTextViewController.m */,
+				8EE66CB51E95E3AC00E56AFD /* FMYCoreTextShowViewController.h */,
+				8EE66CB61E95E3AC00E56AFD /* FMYCoreTextShowViewController.m */,
+				8EE66CB81E95E41B00E56AFD /* FMYCoreTextView.h */,
+				8EE66CB91E95E41B00E56AFD /* FMYCoreTextView.m */,
+			);
+			path = CoreText;
 			sourceTree = "<group>";
 		};
 		8EFE49621E34B1BE00B2513A = {
@@ -368,6 +493,8 @@
 		8EFE49981E34B2A700B2513A /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				8EE66CA31E94CEA800E56AFD /* YSDQ_Demo */,
+				8EE66C8F1E8F88A600E56AFD /* OC_Media */,
 				8E2F0D241E375049000394D8 /* OC_UI */,
 				8EFE499F1E34B32700B2513A /* OC_base */,
 			);
@@ -465,6 +592,9 @@
 		A75A1D07BC7E1A730F48B3DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8EE66C971E8F8BD500E56AFD /* AVFoundation.framework */,
+				8EB295DF1E8BA72600EF936B /* SystemConfiguration.framework */,
+				8EB295DD1E8BA64800EF936B /* NetworkExtension.framework */,
 				8E1BC1E61E45B9EA00F868C1 /* libsqlite3.tbd */,
 				5CB314E124DF2D6E3EB94C6B /* libPods-FMYGirl9.a */,
 			);
@@ -602,6 +732,7 @@
 				8E2F0D211E36FA9B000394D8 /* NSObject+FMY.m in Sources */,
 				8EFE49BD1E34BB3000B2513A /* FMYPerson.m in Sources */,
 				8EFE49761E34B1BE00B2513A /* ViewController.m in Sources */,
+				8EE66C921E8F891200E56AFD /* FMYMediaViewController.m in Sources */,
 				8EFE498B1E34B22C00B2513A /* FMYViewController.m in Sources */,
 				8E2F0D281E3750EA000394D8 /* FMYUITableViewController.m in Sources */,
 				8EFE49C01E34BB9900B2513A /* FMYRuntimTableViewController.m in Sources */,
@@ -613,31 +744,44 @@
 				8EFE49971E34B27F00B2513A /* FMYLabel.m in Sources */,
 				8EFE499B1E34B2E400B2513A /* FMYNavigationController.m in Sources */,
 				8EB295AF1E81082A00EF936B /* FMYBannersTableViewController.m in Sources */,
+				8EB295DA1E8A376400EF936B /* FMYCollectionViewController.m in Sources */,
+				8EB295C01E8367F000EF936B /* FMYTableScrollViewController.m in Sources */,
 				8E2F0D401E38B49E000394D8 /* FMYMKWebViewController.m in Sources */,
 				8E1BC1E21E45AEA200F868C1 /* FMYUtils.m in Sources */,
 				8EB295B21E81163E00EF936B /* FMYBannnerView.m in Sources */,
+				8EE66C961E8F89D900E56AFD /* FMYAVPlayerViewController.m in Sources */,
 				8E2F0D431E38B4CE000394D8 /* WeakDelegate.m in Sources */,
+				8EE66CAA1E94CF5100E56AFD /* FMYYSDQDetailViewController.m in Sources */,
 				8E2F0D2B1E37515A000394D8 /* FMYLayoutConstraintViewController.m in Sources */,
 				8E2F0D1B1E35DE14000394D8 /* FMYChinese.m in Sources */,
 				8E1BC1E51E45B26A00F868C1 /* FMYDBManager.m in Sources */,
 				8E2F0D2D1E37634B000394D8 /* uiabout.md in Sources */,
 				8E1BC1F11E49B1BB00F868C1 /* ControlBezierPlat.m in Sources */,
 				8E1BC1D21E45AA0100F868C1 /* FMYOCBaseViewController.m in Sources */,
+				8EE66CA61E94CEF800E56AFD /* FMYYSDQViewController.m in Sources */,
 				8E2F0D331E38861B000394D8 /* FMYRuntimeNormalCaseViewController.m in Sources */,
+				8EE66CB71E95E3AC00E56AFD /* FMYCoreTextShowViewController.m in Sources */,
 				8EFE498E1E34B23B00B2513A /* FMYTableViewCell.m in Sources */,
 				8EFE49AA1E34B4A300B2513A /* Readme.md in Sources */,
 				8EFE49881E34B20E00B2513A /* FMYObject.m in Sources */,
 				8E2F0D231E37292C000394D8 /* runtime.md in Sources */,
 				8EFE499E1E34B2FD00B2513A /* FMYTabBarController.m in Sources */,
+				8EE66CB41E95E32100E56AFD /* FMYCoreTextViewController.m in Sources */,
+				8EE66C851E8CAD7400E56AFD /* FMYCollectionViewCell.m in Sources */,
 				8E2F0D361E3899CA000394D8 /* FMYMovie.m in Sources */,
 				8EFE49B91E34BAD000B2513A /* NSString+CN.m in Sources */,
+				8EE66C8B1E8CE47600E56AFD /* FMYCollectionReusableView.m in Sources */,
 				8E1BC1F41E49B56600F868C1 /* FMYBottomView.m in Sources */,
 				8EFE49731E34B1BE00B2513A /* AppDelegate.m in Sources */,
 				8E1BC1D91E45ABAD00F868C1 /* FMYSqliteViewController.m in Sources */,
 				8E2F0D461E38B66A000394D8 /* FMYUIWebViewController.m in Sources */,
 				8E1BC1F01E49B1BB00F868C1 /* Control_BezierPath.m in Sources */,
+				8EE66CB01E94E70000E56AFD /* FMYYSDQDetailInfoCell.m in Sources */,
+				8EE66CBA1E95E41B00E56AFD /* FMYCoreTextView.m in Sources */,
+				8EB295BD1E8367B900EF936B /* FMYTableListViewController.m in Sources */,
 				8E1BC1D61E45ABA000F868C1 /* FMYCoreDataViewController.m in Sources */,
 				8E2F0D301E384A1F000394D8 /* FMYRuntimeMsgSendViewController.m in Sources */,
+				8EE66CAD1E94E20800E56AFD /* FMYDetailBarView.m in Sources */,
 				8EFE49941E34B27000B2513A /* FMYButton.m in Sources */,
 				8E1BC1DE1E45AD3500F868C1 /* dataStore.md in Sources */,
 				8EFE49701E34B1BE00B2513A /* main.m in Sources */,
