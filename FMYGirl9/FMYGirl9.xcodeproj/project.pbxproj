@@ -38,6 +38,8 @@
 		8E2F0D4B1E38B77F000394D8 /* uiweb.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E2F0D491E38B77F000394D8 /* uiweb.html */; };
 		8E2F0D4C1E38B77F000394D8 /* mkweb.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E2F0D4A1E38B77F000394D8 /* mkweb.html */; };
 		8E2F0D4F1E38BA50000394D8 /* data_xml in Resources */ = {isa = PBXBuildFile; fileRef = 8E2F0D4E1E38BA50000394D8 /* data_xml */; };
+		8E8DBA011EB1F682004CBA9C /* FMYClangllvmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DBA001EB1F682004CBA9C /* FMYClangllvmViewController.m */; };
+		8E8DBA041EB1F86E004CBA9C /* FMYClangLLVMInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DBA031EB1F86E004CBA9C /* FMYClangLLVMInfoViewController.m */; };
 		8EB295AF1E81082A00EF936B /* FMYBannersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB295AE1E81082A00EF936B /* FMYBannersTableViewController.m */; };
 		8EB295B21E81163E00EF936B /* FMYBannnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB295B11E81163E00EF936B /* FMYBannnerView.m */; };
 		8EB295BD1E8367B900EF936B /* FMYTableListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB295BC1E8367B900EF936B /* FMYTableListViewController.m */; };
@@ -59,6 +61,12 @@
 		8EE66CBA1E95E41B00E56AFD /* FMYCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CB91E95E41B00E56AFD /* FMYCoreTextView.m */; };
 		8EE66CBE1E96177800E56AFD /* FMYButton+FMY.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CBD1E96177800E56AFD /* FMYButton+FMY.m */; };
 		8EE66CC11E96226C00E56AFD /* ysdqimgIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EE66CC01E96226C00E56AFD /* ysdqimgIcon.xcassets */; };
+		8EE66CC41E97395D00E56AFD /* FMYDetailSiteDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CC31E97395D00E56AFD /* FMYDetailSiteDrawer.m */; };
+		8EE66CF91E9C824000E56AFD /* DQDetailEpisodesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CF81E9C824000E56AFD /* DQDetailEpisodesCollectionViewCell.m */; };
+		8EE66CFC1E9C88D200E56AFD /* DQDetailEpisodesPlatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CFB1E9C88D200E56AFD /* DQDetailEpisodesPlatView.m */; };
+		8EE66CFF1E9C8A4F00E56AFD /* DQPlatCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66CFE1E9C8A4F00E56AFD /* DQPlatCollectionView.m */; };
+		8EE66D021E9C978000E56AFD /* DQPlatCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66D011E9C978000E56AFD /* DQPlatCollectionViewCell.m */; };
+		8EE66D3D1E9E0AD500E56AFD /* DQEpisodesGroupBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE66D3C1E9E0AD400E56AFD /* DQEpisodesGroupBarView.m */; };
 		8EFE49701E34B1BE00B2513A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE496F1E34B1BE00B2513A /* main.m */; };
 		8EFE49731E34B1BE00B2513A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE49721E34B1BE00B2513A /* AppDelegate.m */; };
 		8EFE49761E34B1BE00B2513A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE49751E34B1BE00B2513A /* ViewController.m */; };
@@ -138,6 +146,10 @@
 		8E2F0D491E38B77F000394D8 /* uiweb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = uiweb.html; sourceTree = "<group>"; };
 		8E2F0D4A1E38B77F000394D8 /* mkweb.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mkweb.html; sourceTree = "<group>"; };
 		8E2F0D4E1E38BA50000394D8 /* data_xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = data_xml; sourceTree = "<group>"; };
+		8E8DB9FF1EB1F682004CBA9C /* FMYClangllvmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYClangllvmViewController.h; sourceTree = "<group>"; };
+		8E8DBA001EB1F682004CBA9C /* FMYClangllvmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYClangllvmViewController.m; sourceTree = "<group>"; };
+		8E8DBA021EB1F86E004CBA9C /* FMYClangLLVMInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYClangLLVMInfoViewController.h; sourceTree = "<group>"; };
+		8E8DBA031EB1F86E004CBA9C /* FMYClangLLVMInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYClangLLVMInfoViewController.m; sourceTree = "<group>"; };
 		8EB295AD1E81082A00EF936B /* FMYBannersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYBannersTableViewController.h; sourceTree = "<group>"; };
 		8EB295AE1E81082A00EF936B /* FMYBannersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYBannersTableViewController.m; sourceTree = "<group>"; };
 		8EB295B01E81163E00EF936B /* FMYBannnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYBannnerView.h; sourceTree = "<group>"; };
@@ -176,6 +188,18 @@
 		8EE66CBC1E96177800E56AFD /* FMYButton+FMY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMYButton+FMY.h"; sourceTree = "<group>"; };
 		8EE66CBD1E96177800E56AFD /* FMYButton+FMY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMYButton+FMY.m"; sourceTree = "<group>"; };
 		8EE66CC01E96226C00E56AFD /* ysdqimgIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ysdqimgIcon.xcassets; sourceTree = "<group>"; };
+		8EE66CC21E97395D00E56AFD /* FMYDetailSiteDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYDetailSiteDrawer.h; sourceTree = "<group>"; };
+		8EE66CC31E97395D00E56AFD /* FMYDetailSiteDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYDetailSiteDrawer.m; sourceTree = "<group>"; };
+		8EE66CF71E9C824000E56AFD /* DQDetailEpisodesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQDetailEpisodesCollectionViewCell.h; sourceTree = "<group>"; };
+		8EE66CF81E9C824000E56AFD /* DQDetailEpisodesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQDetailEpisodesCollectionViewCell.m; sourceTree = "<group>"; };
+		8EE66CFA1E9C88D200E56AFD /* DQDetailEpisodesPlatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQDetailEpisodesPlatView.h; sourceTree = "<group>"; };
+		8EE66CFB1E9C88D200E56AFD /* DQDetailEpisodesPlatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQDetailEpisodesPlatView.m; sourceTree = "<group>"; };
+		8EE66CFD1E9C8A4F00E56AFD /* DQPlatCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQPlatCollectionView.h; sourceTree = "<group>"; };
+		8EE66CFE1E9C8A4F00E56AFD /* DQPlatCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQPlatCollectionView.m; sourceTree = "<group>"; };
+		8EE66D001E9C978000E56AFD /* DQPlatCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQPlatCollectionViewCell.h; sourceTree = "<group>"; };
+		8EE66D011E9C978000E56AFD /* DQPlatCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQPlatCollectionViewCell.m; sourceTree = "<group>"; };
+		8EE66D3B1E9E0AD400E56AFD /* DQEpisodesGroupBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQEpisodesGroupBarView.h; sourceTree = "<group>"; };
+		8EE66D3C1E9E0AD400E56AFD /* DQEpisodesGroupBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQEpisodesGroupBarView.m; sourceTree = "<group>"; };
 		8EFE496B1E34B1BE00B2513A /* FMYGirl9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMYGirl9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFE496F1E34B1BE00B2513A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8EFE49711E34B1BE00B2513A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -339,6 +363,17 @@
 			path = Datasources;
 			sourceTree = "<group>";
 		};
+		8E8DB9FE1EB1F61C004CBA9C /* Compiler */ = {
+			isa = PBXGroup;
+			children = (
+				8E8DB9FF1EB1F682004CBA9C /* FMYClangllvmViewController.h */,
+				8E8DBA001EB1F682004CBA9C /* FMYClangllvmViewController.m */,
+				8E8DBA021EB1F86E004CBA9C /* FMYClangLLVMInfoViewController.h */,
+				8E8DBA031EB1F86E004CBA9C /* FMYClangLLVMInfoViewController.m */,
+			);
+			path = Compiler;
+			sourceTree = "<group>";
+		};
 		8EB295AC1E8107A300EF936B /* Banners */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,8 +438,20 @@
 				8EE66CA91E94CF5100E56AFD /* FMYYSDQDetailViewController.m */,
 				8EE66CAB1E94E20800E56AFD /* FMYDetailBarView.h */,
 				8EE66CAC1E94E20800E56AFD /* FMYDetailBarView.m */,
+				8EE66CC21E97395D00E56AFD /* FMYDetailSiteDrawer.h */,
+				8EE66CC31E97395D00E56AFD /* FMYDetailSiteDrawer.m */,
 				8EE66CAE1E94E70000E56AFD /* FMYYSDQDetailInfoCell.h */,
 				8EE66CAF1E94E70000E56AFD /* FMYYSDQDetailInfoCell.m */,
+				8EE66CF71E9C824000E56AFD /* DQDetailEpisodesCollectionViewCell.h */,
+				8EE66CF81E9C824000E56AFD /* DQDetailEpisodesCollectionViewCell.m */,
+				8EE66CFA1E9C88D200E56AFD /* DQDetailEpisodesPlatView.h */,
+				8EE66CFB1E9C88D200E56AFD /* DQDetailEpisodesPlatView.m */,
+				8EE66CFD1E9C8A4F00E56AFD /* DQPlatCollectionView.h */,
+				8EE66CFE1E9C8A4F00E56AFD /* DQPlatCollectionView.m */,
+				8EE66D001E9C978000E56AFD /* DQPlatCollectionViewCell.h */,
+				8EE66D011E9C978000E56AFD /* DQPlatCollectionViewCell.m */,
+				8EE66D3B1E9E0AD400E56AFD /* DQEpisodesGroupBarView.h */,
+				8EE66D3C1E9E0AD400E56AFD /* DQEpisodesGroupBarView.m */,
 			);
 			path = Detail_module;
 			sourceTree = "<group>";
@@ -519,6 +566,7 @@
 		8EFE499F1E34B32700B2513A /* OC_base */ = {
 			isa = PBXGroup;
 			children = (
+				8E8DB9FE1EB1F61C004CBA9C /* Compiler */,
 				8E1BC1D31E45AB4200F868C1 /* DataStrore */,
 				8EFE49BA1E34BB0700B2513A /* Runtime */,
 				8E1BC1D01E45AA0100F868C1 /* FMYOCBaseViewController.h */,
@@ -765,9 +813,11 @@
 				8EB295C01E8367F000EF936B /* FMYTableScrollViewController.m in Sources */,
 				8E2F0D401E38B49E000394D8 /* FMYMKWebViewController.m in Sources */,
 				8E1BC1E21E45AEA200F868C1 /* FMYUtils.m in Sources */,
+				8EE66CFC1E9C88D200E56AFD /* DQDetailEpisodesPlatView.m in Sources */,
 				8EB295B21E81163E00EF936B /* FMYBannnerView.m in Sources */,
 				8EE66C961E8F89D900E56AFD /* FMYAVPlayerViewController.m in Sources */,
 				8E2F0D431E38B4CE000394D8 /* WeakDelegate.m in Sources */,
+				8EE66D021E9C978000E56AFD /* DQPlatCollectionViewCell.m in Sources */,
 				8EE66CAA1E94CF5100E56AFD /* FMYYSDQDetailViewController.m in Sources */,
 				8E2F0D2B1E37515A000394D8 /* FMYLayoutConstraintViewController.m in Sources */,
 				8E2F0D1B1E35DE14000394D8 /* FMYChinese.m in Sources */,
@@ -779,12 +829,14 @@
 				8E2F0D331E38861B000394D8 /* FMYRuntimeNormalCaseViewController.m in Sources */,
 				8EE66CB71E95E3AC00E56AFD /* FMYCoreTextShowViewController.m in Sources */,
 				8EFE498E1E34B23B00B2513A /* FMYTableViewCell.m in Sources */,
+				8E8DBA041EB1F86E004CBA9C /* FMYClangLLVMInfoViewController.m in Sources */,
 				8EFE49AA1E34B4A300B2513A /* Readme.md in Sources */,
 				8EFE49881E34B20E00B2513A /* FMYObject.m in Sources */,
 				8E2F0D231E37292C000394D8 /* runtime.md in Sources */,
 				8EFE499E1E34B2FD00B2513A /* FMYTabBarController.m in Sources */,
 				8EE66CB41E95E32100E56AFD /* FMYCoreTextViewController.m in Sources */,
 				8EE66C851E8CAD7400E56AFD /* FMYCollectionViewCell.m in Sources */,
+				8E8DBA011EB1F682004CBA9C /* FMYClangllvmViewController.m in Sources */,
 				8E2F0D361E3899CA000394D8 /* FMYMovie.m in Sources */,
 				8EFE49B91E34BAD000B2513A /* NSString+CN.m in Sources */,
 				8EE66C8B1E8CE47600E56AFD /* FMYCollectionReusableView.m in Sources */,
@@ -792,7 +844,9 @@
 				8EFE49731E34B1BE00B2513A /* AppDelegate.m in Sources */,
 				8EE66CBE1E96177800E56AFD /* FMYButton+FMY.m in Sources */,
 				8E1BC1D91E45ABAD00F868C1 /* FMYSqliteViewController.m in Sources */,
+				8EE66CC41E97395D00E56AFD /* FMYDetailSiteDrawer.m in Sources */,
 				8E2F0D461E38B66A000394D8 /* FMYUIWebViewController.m in Sources */,
+				8EE66D3D1E9E0AD500E56AFD /* DQEpisodesGroupBarView.m in Sources */,
 				8E1BC1F01E49B1BB00F868C1 /* Control_BezierPath.m in Sources */,
 				8EE66CB01E94E70000E56AFD /* FMYYSDQDetailInfoCell.m in Sources */,
 				8EE66CBA1E95E41B00E56AFD /* FMYCoreTextView.m in Sources */,
@@ -804,6 +858,8 @@
 				8E1BC1DE1E45AD3500F868C1 /* dataStore.md in Sources */,
 				8EFE49701E34B1BE00B2513A /* main.m in Sources */,
 				8E2F0D3C1E389E4F000394D8 /* FMYChinese+Lishanyin.m in Sources */,
+				8EE66CF91E9C824000E56AFD /* DQDetailEpisodesCollectionViewCell.m in Sources */,
+				8EE66CFF1E9C8A4F00E56AFD /* DQPlatCollectionView.m in Sources */,
 				8E2F0D181E35D63A000394D8 /* FMYRuntimePropertiesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

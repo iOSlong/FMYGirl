@@ -11,7 +11,6 @@
 #import "FMYButton+FMY.h"
 
 
-
 @implementation DQModel
 @end
 
@@ -67,7 +66,7 @@
     
     /// 片名， 评分 发布等附属信息， 主演， 导演， 类型， 详情，
     _labelName = [UILabel new];
-    _labelName.font = [UIFont fontWithName:@"PingFangSC-Medium" size:18];
+    _labelName.font = DQ_FONT_DETAIL_18;
     _labelName.textColor = RGBCOLOR_HEX(0x222222);
     
     _labelSubInfo   = [self labelDetailInfo];
@@ -133,7 +132,7 @@
 
 - (UILabel *)labelDetailInfo {
     UILabel *label = [UILabel new];
-    label.font          = [UIFont fontWithName:@"PingFangSC-Regular" size:13];
+    label.font          = DQ_FONT_DETAIL_13;
     label.textColor     = RGBCOLOR_HEX(0x666666);
     label.numberOfLines = 0;
     return label;
@@ -168,7 +167,7 @@
 
 + (CGFloat)cellHeightWithModel:(DQModel *)model {
     if (model.show) {
-        CGSize size = [FMYUtils sizeFrom:[UIFont systemFontOfSize:13] andStr:model.showInfo limitW:myDisplayW];
+        CGSize size = [FMYUtils sizeFrom:model.showInfo attributes:[FMYUtils attributesOfText_DedailInfo] limitW:myDisplayW];
         return size.height + mySpanIn * 2 + 100;
     }else{
         return 100;

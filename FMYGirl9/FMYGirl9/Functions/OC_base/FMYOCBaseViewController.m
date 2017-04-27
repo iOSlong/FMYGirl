@@ -9,6 +9,7 @@
 #import "FMYOCBaseViewController.h"
 #import "FMYRuntimTableViewController.h"
 #import "FMYDataStoreViewController.h"
+#import "FMYClangllvmViewController.h"
 
 @interface FMYOCBaseViewController ()
 
@@ -21,6 +22,7 @@
     // Do any additional setup after loading the view.
     [self.arrDataSource addObject:@"Runtimes_about"];
     [self.arrDataSource addObject:@"DataStore_about"];
+    [self.arrDataSource addObject:@"clang.llvm_about"];
 
 }
 
@@ -29,8 +31,8 @@
     FMYTableViewController *tableVC;
     if (indexPath.row == 0)
     {
-        FMYRuntimTableViewController *propertiesVC = [FMYRuntimTableViewController new];
-        tableVC = propertiesVC;
+        FMYRuntimTableViewController *runtimeVC = [FMYRuntimTableViewController new];
+        tableVC = runtimeVC;
     }
     else if (indexPath.row == 1)
     {
@@ -39,9 +41,10 @@
     }
     else if (indexPath.row == 2)
     {
-        FMYRuntimTableViewController *caseVC = [FMYRuntimTableViewController new];
-        tableVC = caseVC;
+        FMYClangllvmViewController *complierVC = [FMYClangllvmViewController new];
+        tableVC = complierVC;
     }
+    tableVC.title = self.arrDataSource[indexPath.row];
     tableVC.hidesBottomBarWhenPushed = YES;
     
     [self.navigationController pushViewController:tableVC animated:YES];

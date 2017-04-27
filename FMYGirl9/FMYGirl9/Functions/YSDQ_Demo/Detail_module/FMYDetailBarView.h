@@ -26,9 +26,12 @@ typedef void(^DQDetailBarBlock)(DQDetailEvent event);
 @interface DQSiteView : UIView
 @property (nonatomic, strong) UIImageView   *imgvSiteIcon;
 @property (nonatomic, strong) UILabel       *labelSite;
-@property (nonatomic, strong) UIImageView   *imgvSiteAccessory;
+@property (nonatomic, strong) FMYButton     *btnSiteAccessory;
 
 @property (nonatomic, strong) NSString *siteInfo;
+
+- (void)siteEvent:(DQDetailBarBlock)thisBlock;
+
 @end
 
 

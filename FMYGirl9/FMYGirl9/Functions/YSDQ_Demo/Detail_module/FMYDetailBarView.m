@@ -13,7 +13,12 @@
 
 
 
-@implementation DQSiteView
+@implementation DQSiteView {
+    DQDetailBarBlock _DBBlock;
+}
+- (void)siteEvent:(DQDetailBarBlock)thisBlock {
+    _DBBlock = thisBlock;
+}
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -25,16 +30,15 @@
         _labelSite.font = [UIFont systemFontOfSize:13];
         _labelSite.textColor = RGBCOLOR_HEX(0x444444);
         
-        _imgvSiteAccessory = [UIImageView new];
+        _btnSiteAccessory = [FMYButton buttonFrame:CGRectZero imgSelected:@"半屏收起icon" imgNormal:@"半屏下展开icon" imgHighlight:nil target:nil action:nil mode:UIViewContentModeScaleAspectFit ContentEdgeInsets:UIEdgeInsetsZero];
         
-        _imgvSiteAccessory.image = [UIImage imageNamed:@"半屏下展开icon"];
         
         _imgvSiteIcon.backgroundColor = [UIColor redColor];
         _labelSite.backgroundColor = [UIColor purpleColor];
         
         [self addSubview:_imgvSiteIcon];
         [self addSubview:_labelSite];
-        [self addSubview:_imgvSiteAccessory];
+        [self addSubview:_btnSiteAccessory];
 
         
         [_imgvSiteIcon mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -48,7 +52,7 @@
             make.left.equalTo(_imgvSiteIcon.mas_right).offset(5);
             make.height.equalTo(@18);
         }];
-        [_imgvSiteAccessory mas_makeConstraints:^(MASConstraintMaker *make) {
+        [_btnSiteAccessory mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.equalTo(_imgvSiteIcon.mas_centerY);
             make.left.equalTo(_labelSite.mas_right).offset(5);
             make.width.equalTo(@13);
@@ -56,20 +60,32 @@
         }];
         
         [self mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(_imgvSiteAccessory.mas_right).offset(5);
+            make.right.equalTo(_btnSiteAccessory.mas_right).offset(5);
         }];
         
+        [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(siteViewTap:)]];
+        self.exclusiveTouch = YES;
     }
     return self;
 }
+
+- (void)siteViewTap:(UITapGestureRecognizer *)tapG {
+    _btnSiteAccessory.selected = !_btnSiteAccessory.selected;
+    CGPoint localP = [tapG locationInView:self];
+    [FMYUtils sharedFMYUtils].localP = localP;
+    if (_DBBlock) {
+        _DBBlock(DQDetailEventSiteClick);
+    }
+}
+
 
 - (void)setSiteInfo:(NSString *)siteInfo {
     _siteInfo = siteInfo;
     if (siteInfo) {
         self.labelSite.text = siteInfo;
-        [self.labelSite sizeToFit];
     }
 }
+
 
 @end
 
@@ -106,7 +122,14 @@
     
     _viewSite = [DQSiteView new];
     _viewSite.backgroundColor = [UIColor grayColor];
-    _viewSite.siteInfo = @"乐视网";
+    _viewSite.siteInfo = @"乐视网haha ";
+    [_viewSite siteEvent:^(DQDetailEvent event) {
+        CGPoint localP = [_viewSite convertPoint:[FMYUtils sharedFMYUtils].localP toView:self];
+        [FMYUtils sharedFMYUtils].localP = localP;
+        if (_detailBarBlock) {
+            _detailBarBlock(event);
+        }
+    }];
     [self addSubview:_viewSite];
     
     [_viewSite mas_makeConstraints:^(MASConstraintMaker *make) {

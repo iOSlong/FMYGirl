@@ -12,6 +12,7 @@
 
 typedef NS_ENUM(NSUInteger, FMYBottomStyle) {
     FMYBottomViewStylePlat,
+    FMYBottomViewStyleLucency
 };
 
 

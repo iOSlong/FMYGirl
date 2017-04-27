@@ -11,8 +11,11 @@
 
 #import "FMYDetailBarView.h"
 #import "FMYYSDQDetailInfoCell.h"
+#import "FMYBottomView.h"
+#import "FMYDetailSiteDrawer.h"
 
 
+#import "DQDetailEpisodesPlatView.h"
 
 @interface FMYYSDQDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -22,6 +25,12 @@
 @property (nonatomic, strong) FMYTableView *tableView;
 
 @property (nonatomic, strong) FMYDetailBarView *barView;
+
+@property (nonatomic, strong) FMYBottomView     *bottomView;
+
+@property (nonatomic, strong) FMYDetailSiteDrawer *siteDrawer;
+
+@property (nonatomic, strong) DQDetailEpisodesPlatView *episodesPlatView;
 
 @end
 
@@ -43,7 +52,10 @@
     _model.showInfo = testString;
     
     [self.tableView reloadData];
+    
+    
 }
+
 
 - (void)configureContainerView {
     self.playerContainerView    = [UIView new];
@@ -94,6 +106,16 @@
     self.tableView.tableHeaderView = self.barView;
     [self.barView detailBarEvent:^(DQDetailEvent event) {
         NSLog(@"%lu",(unsigned long)event);
+        CGPoint localP = [_barView convertPoint:[FMYUtils sharedFMYUtils].localP toView:self.view];
+        [FMYUtils sharedFMYUtils].localP = localP;
+        CGPoint p = [_barView convertPoint:CGPointMake(0, _barView.height) toView:self.view];
+        
+        if (!_siteDrawer) {
+            _siteDrawer = [[FMYDetailSiteDrawer alloc] initWithFrame:CGRectMake(10, p.y + 64 + 8, 100, 160)];
+        }
+        _siteDrawer.arrSites = @[@"",@"",@"",@""];
+        self.bottomView.centerView = self.siteDrawer;
+        self.bottomView.hidden = NO;
     }];
 }
 
@@ -120,7 +142,7 @@
     
     if (!cell) {
         cell = [[FMYTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-        cell.textLabel.text = @"hello world!";
+        cell.textLabel.text = @"查看更多";
     }
     
     cell.backgroundColor = [UIColor whiteColor];
@@ -135,9 +157,30 @@
     return 60;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row != 0) {
+        self.bottomView.centerView = self.episodesPlatView;
+        self.bottomView.hidden = NO;
+        [self.episodesPlatView reloadEpisodesPlatWithType:[NSNumber numberWithInt:indexPath.row%2]];
+    }
+}
 
 
 
+- (FMYBottomView *)bottomView {
+    if (!_bottomView) {
+        _bottomView = [[FMYBottomView alloc] initWithStyle:FMYBottomViewStyleLucency];
+    }
+    return _bottomView;
+}
+
+- (DQDetailEpisodesPlatView *)episodesPlatView {
+    if (!_episodesPlatView) {
+        _episodesPlatView = [[DQDetailEpisodesPlatView alloc] initWithFrame:CGRectMake(0, SCREENH*0.4, SCREENW, SCREENH*0.55)];
+    }
+    return _episodesPlatView;
+}
 
 
 

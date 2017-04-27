@@ -21,6 +21,16 @@ const char * makeDictCachePath(const char *fullNameSpace)
 
 @implementation FMYUtils
 
++ (FMYUtils *)sharedFMYUtils {
+    static dispatch_once_t once;
+    static id instance;
+    dispatch_once(&once, ^{
+        instance = [self new];
+    });
+    return instance;
+}
+
+
 + (NSString *)pathOfDatabase {
     static NSString *path = nil;
     if (nil == path) {
@@ -46,35 +56,16 @@ const char * makeDictCachePath(const char *fullNameSpace)
     return newsItems;
 }
 
-+ (CGSize)sizeFrom:(UIFont *)font andStr:(NSString *)string limitW:(CGFloat)width {
-    
-    NSDictionary *attributes = [FMYUtils defaultTextAttributes];
-    
-    CGSize size = [string boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
-    return size;
-}
+
 
 + (NSAttributedString *)showAttributedFrom:(NSString *)string {
 
-    NSAttributedString *attributeStr = [[NSAttributedString alloc] initWithString:string attributes:[FMYUtils defaultTextAttributes]];
+    NSAttributedString *attributeStr = [[NSAttributedString alloc] initWithString:string attributes:[FMYUtils attributesOfText_DedailInfo]];
     return attributeStr;
 }
 
-+ (NSAttributedString *)attributedString:(NSString *)string font:(UIFont *)font paraStyle:(NSParagraphStyle *)style kern:(NSNumber *)kern {
-    if (!style) {
-        style = [NSParagraphStyle defaultParagraphStyle];
-    }
-    NSDictionary *attributes = @{NSFontAttributeName:font,
-                                 NSParagraphStyleAttributeName:style,
-                                 NSKernAttributeName:@1.5f
-                                 };
-    NSAttributedString *attributeStr = [[NSAttributedString alloc] initWithString:string attributes:attributes];
-    
-    return attributeStr;
-}
 
-+ (NSDictionary *)defaultTextAttributes;
-{
++ (NSDictionary *)attributesOfText_DedailInfo {
     static NSDictionary *attributes;
     NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
     paraStyle.lineBreakMode = NSLineBreakByCharWrapping;
@@ -85,13 +76,28 @@ const char * makeDictCachePath(const char *fullNameSpace)
     paraStyle.paragraphSpacingBefore = 0.0;
     paraStyle.headIndent = 0;
     paraStyle.tailIndent = 0;
-    //字间距 NSKernAttributeName:@1.5f
-    attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:13],
+    //字间距 NSKernAttributeName:@0.5f
+    attributes = @{NSFontAttributeName:DQ_FONT_DETAIL_13,
                    NSParagraphStyleAttributeName:paraStyle,
-                   NSKernAttributeName:@1.5f
+                   NSKernAttributeName:@0.5f
                    };
     return attributes;
 }
+
++ (CGSize)sizeFrom:(NSString *)text attributes:(NSDictionary *)attributes limitW:(CGFloat)maxW{
+    
+    CGSize size = [text boundingRectWithSize:CGSizeMake(maxW, MAXFLOAT)
+                                     options:NSStringDrawingUsesLineFragmentOrigin
+                                  attributes:attributes
+                                     context:nil].size;
+    return size;
+}
+
++ (NSAttributedString *)stringAttributed:(NSDictionary *)attributes fromStr:(NSString *)text {
+    NSAttributedString *attributeStr = [[NSAttributedString alloc] initWithString:text attributes:attributes];
+    return attributeStr;
+}
+
 
 @end
 
