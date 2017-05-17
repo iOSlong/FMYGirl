@@ -41,7 +41,16 @@
 
 
 #pragma mark - DataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    if ([[self.arrDataSource firstObject] isKindOfClass:[NSArray class]]) {
+        return self.arrDataSource.count;
+    }
+    return 1;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if ([[self.arrDataSource firstObject] isKindOfClass:[NSArray class]]) {
+        return [self.arrDataSource[section] count];
+    }
     return self.arrDataSource.count;
 }
 - (FMYTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -53,7 +62,12 @@
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    if (indexPath.row < self.arrDataSource.count) {
+    if ([[self.arrDataSource firstObject] isKindOfClass:[NSArray class]]) {
+        if (indexPath.row < [self.arrDataSource[indexPath.section] count]) {
+            NSObject *item = self.arrDataSource[indexPath.section][indexPath.row];
+            cell.textLabel.text = item.description;
+        }
+    }else if (indexPath.row < self.arrDataSource.count) {
         NSObject *item = self.arrDataSource[indexPath.row];
         cell.textLabel.text = item.description;
     }

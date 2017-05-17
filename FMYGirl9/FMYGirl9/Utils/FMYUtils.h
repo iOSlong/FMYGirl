@@ -7,6 +7,7 @@
 //
 
 #import "FMYObject.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 #define DQ_FONT_DETAIL_13  [UIFont fontWithName:@"PingFangSC-Regular" size:13]
 #define DQ_FONT_DETAIL_18  [UIFont fontWithName:@"PingFangSC-Medium" size:18]
@@ -42,5 +43,10 @@ const char * makeDictCachePath(const char *fullNameSpace);
 
 + (NSAttributedString *)stringAttributed:(NSDictionary *)attributes fromStr:(NSString *)text;
 
+
++ (void)showHODAnimation:(BOOL)animated toView:(UIView *)view;
++ (void)removeHOD;
++ (void)showHint:(NSString *)hint hide:(CGFloat)delay;
++ (void)showHint:(NSString *)hint;
 
 @end

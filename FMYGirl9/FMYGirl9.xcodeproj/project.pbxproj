@@ -40,6 +40,8 @@
 		8E2F0D4F1E38BA50000394D8 /* data_xml in Resources */ = {isa = PBXBuildFile; fileRef = 8E2F0D4E1E38BA50000394D8 /* data_xml */; };
 		8E8DBA011EB1F682004CBA9C /* FMYClangllvmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DBA001EB1F682004CBA9C /* FMYClangllvmViewController.m */; };
 		8E8DBA041EB1F86E004CBA9C /* FMYClangLLVMInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DBA031EB1F86E004CBA9C /* FMYClangLLVMInfoViewController.m */; };
+		8E8DBA151ECACD62004CBA9C /* FMYThirdsUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DBA141ECACD62004CBA9C /* FMYThirdsUIViewController.m */; };
+		8E8DBA181ECACFD6004CBA9C /* MBProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DBA171ECACFD6004CBA9C /* MBProgressViewController.m */; };
 		8EB295AF1E81082A00EF936B /* FMYBannersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB295AE1E81082A00EF936B /* FMYBannersTableViewController.m */; };
 		8EB295B21E81163E00EF936B /* FMYBannnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB295B11E81163E00EF936B /* FMYBannnerView.m */; };
 		8EB295BD1E8367B900EF936B /* FMYTableListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB295BC1E8367B900EF936B /* FMYTableListViewController.m */; };
@@ -150,6 +152,11 @@
 		8E8DBA001EB1F682004CBA9C /* FMYClangllvmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYClangllvmViewController.m; sourceTree = "<group>"; };
 		8E8DBA021EB1F86E004CBA9C /* FMYClangLLVMInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYClangLLVMInfoViewController.h; sourceTree = "<group>"; };
 		8E8DBA031EB1F86E004CBA9C /* FMYClangLLVMInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYClangLLVMInfoViewController.m; sourceTree = "<group>"; };
+		8E8DBA051EBB4658004CBA9C /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		8E8DBA131ECACD62004CBA9C /* FMYThirdsUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYThirdsUIViewController.h; sourceTree = "<group>"; };
+		8E8DBA141ECACD62004CBA9C /* FMYThirdsUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYThirdsUIViewController.m; sourceTree = "<group>"; };
+		8E8DBA161ECACFD6004CBA9C /* MBProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressViewController.h; sourceTree = "<group>"; };
+		8E8DBA171ECACFD6004CBA9C /* MBProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressViewController.m; sourceTree = "<group>"; };
 		8EB295AD1E81082A00EF936B /* FMYBannersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYBannersTableViewController.h; sourceTree = "<group>"; };
 		8EB295AE1E81082A00EF936B /* FMYBannersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYBannersTableViewController.m; sourceTree = "<group>"; };
 		8EB295B01E81163E00EF936B /* FMYBannnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYBannnerView.h; sourceTree = "<group>"; };
@@ -309,6 +316,7 @@
 		8E2F0D241E375049000394D8 /* OC_UI */ = {
 			isa = PBXGroup;
 			children = (
+				8E8DBA121ECACD1F004CBA9C /* Thirds */,
 				8EE66CB11E95E2F800E56AFD /* CoreText */,
 				8EB295BA1E83675700EF936B /* Tables */,
 				8E1BC1E81E49A56200F868C1 /* BezierView */,
@@ -372,6 +380,17 @@
 				8E8DBA031EB1F86E004CBA9C /* FMYClangLLVMInfoViewController.m */,
 			);
 			path = Compiler;
+			sourceTree = "<group>";
+		};
+		8E8DBA121ECACD1F004CBA9C /* Thirds */ = {
+			isa = PBXGroup;
+			children = (
+				8E8DBA131ECACD62004CBA9C /* FMYThirdsUIViewController.h */,
+				8E8DBA141ECACD62004CBA9C /* FMYThirdsUIViewController.m */,
+				8E8DBA161ECACFD6004CBA9C /* MBProgressViewController.h */,
+				8E8DBA171ECACFD6004CBA9C /* MBProgressViewController.m */,
+			);
+			path = Thirds;
 			sourceTree = "<group>";
 		};
 		8EB295AC1E8107A300EF936B /* Banners */ = {
@@ -512,6 +531,7 @@
 				8EFE49771E34B1BE00B2513A /* Main.storyboard */,
 				8EFE497A1E34B1BE00B2513A /* Assets.xcassets */,
 				8EFE497C1E34B1BE00B2513A /* LaunchScreen.storyboard */,
+				8E8DBA051EBB4658004CBA9C /* MyPlayground.playground */,
 				8EFE497F1E34B1BE00B2513A /* Info.plist */,
 				8EFE496E1E34B1BE00B2513A /* Supporting Files */,
 			);
@@ -824,6 +844,7 @@
 				8E1BC1E51E45B26A00F868C1 /* FMYDBManager.m in Sources */,
 				8E2F0D2D1E37634B000394D8 /* uiabout.md in Sources */,
 				8E1BC1F11E49B1BB00F868C1 /* ControlBezierPlat.m in Sources */,
+				8E8DBA151ECACD62004CBA9C /* FMYThirdsUIViewController.m in Sources */,
 				8E1BC1D21E45AA0100F868C1 /* FMYOCBaseViewController.m in Sources */,
 				8EE66CA61E94CEF800E56AFD /* FMYYSDQViewController.m in Sources */,
 				8E2F0D331E38861B000394D8 /* FMYRuntimeNormalCaseViewController.m in Sources */,
@@ -842,6 +863,7 @@
 				8EE66C8B1E8CE47600E56AFD /* FMYCollectionReusableView.m in Sources */,
 				8E1BC1F41E49B56600F868C1 /* FMYBottomView.m in Sources */,
 				8EFE49731E34B1BE00B2513A /* AppDelegate.m in Sources */,
+				8E8DBA181ECACFD6004CBA9C /* MBProgressViewController.m in Sources */,
 				8EE66CBE1E96177800E56AFD /* FMYButton+FMY.m in Sources */,
 				8E1BC1D91E45ABAD00F868C1 /* FMYSqliteViewController.m in Sources */,
 				8EE66CC41E97395D00E56AFD /* FMYDetailSiteDrawer.m in Sources */,

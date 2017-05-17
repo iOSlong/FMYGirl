@@ -79,11 +79,21 @@
     _itemLayoutInfo = @[@{@0:@4},
                         @{@1:@3},
                         @{@2:@3},
-                        @{@3:@3},];
+                        @{@3:@10},];
     
     [self.view addSubview:self.collectionoView];
     
     self.collectionoView.mj_header = self.refreshHeader;
+    
+    UIBarButtonItem *rBarItem = [[UIBarButtonItem alloc] initWithTitle:@"scroll" style:UIBarButtonItemStylePlain target:self action:@selector(scrollBarItemClick:)];
+    self.navigationItem.rightBarButtonItem = rBarItem;
+    
+    
+}
+
+- (void)scrollBarItemClick:(id)sender {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:4 inSection:3];
+    [self.collectionoView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:YES];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {

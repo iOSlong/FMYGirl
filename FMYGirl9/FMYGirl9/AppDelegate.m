@@ -22,7 +22,13 @@
 
 @end
 
+#define MyfineName   ({char *p = strchr(__FILE__,'/'); if (p) { p ++ ;}else {p = __FILE__ ;} p;})
+
 @implementation AppDelegate
+
+- (void)maroTest {
+//    NSLog(@"%s",__is_identifier);
+}
 
 - (NSDictionary *)ssidInfo {
     NSString *ssid = @"Not Found";
@@ -60,9 +66,19 @@
     return info;
 }
 
+#define DefineParamCount(...) __VA_ARGS__
+#define DefineParamN_Value(N,...) __VA_ARGS__
+
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    NSLog(@"%s,%d",DefineParamCount(__FILE__,__LINE__));
+    
+    NSLog(@"%s,%d",DefineParamN_Value(2,__FILE__,__LINE__));
+    
+
     FMYUITableViewController    *uiVC   = [FMYUITableViewController new];
     
     FMYOCBaseViewController     *baseVC = [FMYOCBaseViewController new];
@@ -98,6 +114,17 @@
     
     self.window.rootViewController = tabC;
     [self.window makeKeyAndVisible];
+    
+//    char *p = strchr(__FILE__,'/'); if (p) {return p ;}else {return __FILE__ ;}
+    
+//    char *p = strchr(__FILE__,'/'); if (p) { p++ ;}else {p = __FILE__ ;}
+//    char *p = strchr(__FILE__,'/'); if (p) { p++ ;}else {p = __FILE__ ;} p;
+    
+    NSLog(@"%s",MyfineName);
+    
+    
+
+    
     
     return YES;
 }

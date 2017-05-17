@@ -10,16 +10,16 @@
 
 
 
-#if foo
-#endif foo // warning: extra tokens at end of #endif directive
-
-//#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wextra-tokens"
-
-#if foo
-#endif foo // no warning
-
-#pragma clang diagnostic pop
+//#if foo
+//#endif foo // warning: extra tokens at end of #endif directive
+//
+////#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wextra-tokens"
+//
+//#if foo
+//#endif foo // no warning
+//
+//#pragma clang diagnostic pop
 
 
 
@@ -30,6 +30,14 @@
 
 // The following will produce an error message
 //#pragma GCC error "Not supported"
+
+#if foo
+#endif foo // warning: extra tokens at end of #endif directive
+
+#pragma clang system_header
+
+#if foo
+#endif foo // no warning
 
 
 @interface FMYClangllvmViewController : FMYTableViewController
