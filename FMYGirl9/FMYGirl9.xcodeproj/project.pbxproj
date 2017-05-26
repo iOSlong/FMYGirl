@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7E5CDA11A8AF9676363B4859 /* libPods-FMYGirl9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB314E124DF2D6E3EB94C6B /* libPods-FMYGirl9.a */; };
+		8E0B7CA71ED7F3D5006D1A13 /* FMYURLSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B7CA61ED7F3D5006D1A13 /* FMYURLSessionViewController.m */; };
+		8E0B7CAA1ED7F4AC006D1A13 /* FMYSessionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B7CA91ED7F4AC006D1A13 /* FMYSessionDetailViewController.m */; };
+		8E0B7CAF1ED7F640006D1A13 /* FMYURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0B7CAE1ED7F640006D1A13 /* FMYURLSessionManager.m */; };
 		8E1BC1D21E45AA0100F868C1 /* FMYOCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1D11E45AA0100F868C1 /* FMYOCBaseViewController.m */; };
 		8E1BC1D61E45ABA000F868C1 /* FMYCoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1D51E45ABA000F868C1 /* FMYCoreDataViewController.m */; };
 		8E1BC1D91E45ABAD00F868C1 /* FMYSqliteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1D81E45ABAD00F868C1 /* FMYSqliteViewController.m */; };
@@ -96,6 +99,12 @@
 		19745F210658F5ADC7745726 /* Pods-FMYGirl9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMYGirl9.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FMYGirl9/Pods-FMYGirl9.debug.xcconfig"; sourceTree = "<group>"; };
 		36C004A94CC27E86FCEA362D /* Pods-FMYGirl9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMYGirl9.release.xcconfig"; path = "Pods/Target Support Files/Pods-FMYGirl9/Pods-FMYGirl9.release.xcconfig"; sourceTree = "<group>"; };
 		5CB314E124DF2D6E3EB94C6B /* libPods-FMYGirl9.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FMYGirl9.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E0B7CA51ED7F3D5006D1A13 /* FMYURLSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYURLSessionViewController.h; sourceTree = "<group>"; };
+		8E0B7CA61ED7F3D5006D1A13 /* FMYURLSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYURLSessionViewController.m; sourceTree = "<group>"; };
+		8E0B7CA81ED7F4AC006D1A13 /* FMYSessionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYSessionDetailViewController.h; sourceTree = "<group>"; };
+		8E0B7CA91ED7F4AC006D1A13 /* FMYSessionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYSessionDetailViewController.m; sourceTree = "<group>"; };
+		8E0B7CAD1ED7F640006D1A13 /* FMYURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYURLSessionManager.h; sourceTree = "<group>"; };
+		8E0B7CAE1ED7F640006D1A13 /* FMYURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYURLSessionManager.m; sourceTree = "<group>"; };
 		8E1BC1D01E45AA0100F868C1 /* FMYOCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYOCBaseViewController.h; sourceTree = "<group>"; };
 		8E1BC1D11E45AA0100F868C1 /* FMYOCBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYOCBaseViewController.m; sourceTree = "<group>"; };
 		8E1BC1D41E45ABA000F868C1 /* FMYCoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYCoreDataViewController.h; sourceTree = "<group>"; };
@@ -274,6 +283,34 @@
 				36C004A94CC27E86FCEA362D /* Pods-FMYGirl9.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8E0B7CA41ED7F394006D1A13 /* UrlSession */ = {
+			isa = PBXGroup;
+			children = (
+				8E0B7CA51ED7F3D5006D1A13 /* FMYURLSessionViewController.h */,
+				8E0B7CA61ED7F3D5006D1A13 /* FMYURLSessionViewController.m */,
+				8E0B7CA81ED7F4AC006D1A13 /* FMYSessionDetailViewController.h */,
+				8E0B7CA91ED7F4AC006D1A13 /* FMYSessionDetailViewController.m */,
+			);
+			path = UrlSession;
+			sourceTree = "<group>";
+		};
+		8E0B7CAB1ED7F5CB006D1A13 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8E0B7CAC1ED7F5E6006D1A13 /* Network */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8E0B7CAC1ED7F5E6006D1A13 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8E0B7CAD1ED7F640006D1A13 /* FMYURLSessionManager.h */,
+				8E0B7CAE1ED7F640006D1A13 /* FMYURLSessionManager.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		8E1BC1D31E45AB4200F868C1 /* DataStrore */ = {
@@ -518,6 +555,7 @@
 		8EFE496D1E34B1BE00B2513A /* FMYGirl9 */ = {
 			isa = PBXGroup;
 			children = (
+				8E0B7CAB1ED7F5CB006D1A13 /* Components */,
 				8EE66CBB1E96173300E56AFD /* Categorys */,
 				8E1BC1DF1E45AE2D00F868C1 /* Utils */,
 				8EFE49AC1E34B6F600B2513A /* Constants */,
@@ -586,6 +624,7 @@
 		8EFE499F1E34B32700B2513A /* OC_base */ = {
 			isa = PBXGroup;
 			children = (
+				8E0B7CA41ED7F394006D1A13 /* UrlSession */,
 				8E8DB9FE1EB1F61C004CBA9C /* Compiler */,
 				8E1BC1D31E45AB4200F868C1 /* DataStrore */,
 				8EFE49BA1E34BB0700B2513A /* Runtime */,
@@ -831,6 +870,7 @@
 				8EB295AF1E81082A00EF936B /* FMYBannersTableViewController.m in Sources */,
 				8EB295DA1E8A376400EF936B /* FMYCollectionViewController.m in Sources */,
 				8EB295C01E8367F000EF936B /* FMYTableScrollViewController.m in Sources */,
+				8E0B7CA71ED7F3D5006D1A13 /* FMYURLSessionViewController.m in Sources */,
 				8E2F0D401E38B49E000394D8 /* FMYMKWebViewController.m in Sources */,
 				8E1BC1E21E45AEA200F868C1 /* FMYUtils.m in Sources */,
 				8EE66CFC1E9C88D200E56AFD /* DQDetailEpisodesPlatView.m in Sources */,
@@ -866,10 +906,12 @@
 				8E8DBA181ECACFD6004CBA9C /* MBProgressViewController.m in Sources */,
 				8EE66CBE1E96177800E56AFD /* FMYButton+FMY.m in Sources */,
 				8E1BC1D91E45ABAD00F868C1 /* FMYSqliteViewController.m in Sources */,
+				8E0B7CAF1ED7F640006D1A13 /* FMYURLSessionManager.m in Sources */,
 				8EE66CC41E97395D00E56AFD /* FMYDetailSiteDrawer.m in Sources */,
 				8E2F0D461E38B66A000394D8 /* FMYUIWebViewController.m in Sources */,
 				8EE66D3D1E9E0AD500E56AFD /* DQEpisodesGroupBarView.m in Sources */,
 				8E1BC1F01E49B1BB00F868C1 /* Control_BezierPath.m in Sources */,
+				8E0B7CAA1ED7F4AC006D1A13 /* FMYSessionDetailViewController.m in Sources */,
 				8EE66CB01E94E70000E56AFD /* FMYYSDQDetailInfoCell.m in Sources */,
 				8EE66CBA1E95E41B00E56AFD /* FMYCoreTextView.m in Sources */,
 				8EB295BD1E8367B900EF936B /* FMYTableListViewController.m in Sources */,
