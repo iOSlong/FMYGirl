@@ -8,6 +8,7 @@
 
 #import "FMYYSDQViewController.h"
 #import "FMYYSDQDetailViewController.h"
+#import "FMYImgLoadViewController.h"
 
 @interface FMYYSDQViewController ()
 
@@ -19,6 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.arrDataSource addObject:@"Detail_VC"];
+    [self.arrDataSource addObject:@"ImgLoad"];
 
 }
 
@@ -32,6 +34,12 @@
         detailVC.hidesBottomBarWhenPushed       = YES;
         detailVC.title = @"Detail_VC";
         desVC  = detailVC;
+    }
+    else if (indexPath.row == 1)
+    {
+        FMYImgLoadViewController *imgloadVC = [FMYImgLoadViewController new];
+        imgloadVC.title = @"ImgLoad";
+        desVC = imgloadVC;
     }
     
     [self.navigationController pushViewController:desVC animated:YES];

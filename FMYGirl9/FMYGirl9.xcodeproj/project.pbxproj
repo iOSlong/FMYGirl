@@ -24,6 +24,7 @@
 		8E1BC1F11E49B1BB00F868C1 /* ControlBezierPlat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1EF1E49B1BB00F868C1 /* ControlBezierPlat.m */; };
 		8E1BC1F41E49B56600F868C1 /* FMYBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1BC1F31E49B56600F868C1 /* FMYBottomView.m */; };
 		8E1BC1F61E49BECE00F868C1 /* fmywplist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E1BC1F51E49BECE00F868C1 /* fmywplist.plist */; };
+		8E2BCA561EFA16D70013B462 /* FMYImgLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2BCA551EFA16D70013B462 /* FMYImgLoadViewController.m */; };
 		8E2F0D181E35D63A000394D8 /* FMYRuntimePropertiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F0D171E35D63A000394D8 /* FMYRuntimePropertiesViewController.m */; };
 		8E2F0D1B1E35DE14000394D8 /* FMYChinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F0D1A1E35DE14000394D8 /* FMYChinese.m */; };
 		8E2F0D211E36FA9B000394D8 /* NSObject+FMY.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F0D201E36FA9B000394D8 /* NSObject+FMY.m */; };
@@ -128,6 +129,8 @@
 		8E1BC1F21E49B56500F868C1 /* FMYBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYBottomView.h; sourceTree = "<group>"; };
 		8E1BC1F31E49B56600F868C1 /* FMYBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYBottomView.m; sourceTree = "<group>"; };
 		8E1BC1F51E49BECE00F868C1 /* fmywplist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fmywplist.plist; sourceTree = "<group>"; };
+		8E2BCA541EFA16D70013B462 /* FMYImgLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYImgLoadViewController.h; sourceTree = "<group>"; };
+		8E2BCA551EFA16D70013B462 /* FMYImgLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYImgLoadViewController.m; sourceTree = "<group>"; };
 		8E2F0D161E35D63A000394D8 /* FMYRuntimePropertiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYRuntimePropertiesViewController.h; sourceTree = "<group>"; };
 		8E2F0D171E35D63A000394D8 /* FMYRuntimePropertiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYRuntimePropertiesViewController.m; sourceTree = "<group>"; };
 		8E2F0D191E35DE14000394D8 /* FMYChinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYChinese.h; sourceTree = "<group>"; };
@@ -350,6 +353,15 @@
 			path = BezierView;
 			sourceTree = "<group>";
 		};
+		8E2BCA531EFA16A90013B462 /* ImgLoad */ = {
+			isa = PBXGroup;
+			children = (
+				8E2BCA541EFA16D70013B462 /* FMYImgLoadViewController.h */,
+				8E2BCA551EFA16D70013B462 /* FMYImgLoadViewController.m */,
+			);
+			path = ImgLoad;
+			sourceTree = "<group>";
+		};
 		8E2F0D241E375049000394D8 /* OC_UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +492,7 @@
 		8EE66CA31E94CEA800E56AFD /* YSDQ_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				8E2BCA531EFA16A90013B462 /* ImgLoad */,
 				8EE66CA71E94CF0700E56AFD /* Detail_module */,
 				8EE66CA41E94CEF800E56AFD /* FMYYSDQViewController.h */,
 				8EE66CA51E94CEF800E56AFD /* FMYYSDQViewController.m */,
@@ -812,7 +825,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		88E516D9B9B276B62963A671 /* [CP] Copy Pods Resources */ = {
@@ -907,6 +920,7 @@
 				8EE66CBE1E96177800E56AFD /* FMYButton+FMY.m in Sources */,
 				8E1BC1D91E45ABAD00F868C1 /* FMYSqliteViewController.m in Sources */,
 				8E0B7CAF1ED7F640006D1A13 /* FMYURLSessionManager.m in Sources */,
+				8E2BCA561EFA16D70013B462 /* FMYImgLoadViewController.m in Sources */,
 				8EE66CC41E97395D00E56AFD /* FMYDetailSiteDrawer.m in Sources */,
 				8E2F0D461E38B66A000394D8 /* FMYUIWebViewController.m in Sources */,
 				8EE66D3D1E9E0AD500E56AFD /* DQEpisodesGroupBarView.m in Sources */,

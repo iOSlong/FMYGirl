@@ -69,10 +69,72 @@
 #define DefineParamCount(...) __VA_ARGS__
 #define DefineParamN_Value(N,...) __VA_ARGS__
 
+- (NSArray *)arrWithDepart:(NSString *)mark desStr:(NSString *)desString {
+    NSArray *parts = [desString componentsSeparatedByString:@"&"];
+    return parts;
+}
+
+
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSString *urlimg_gif = @"apiversion=2&app=2.1.9&app_name=Shandian_ios&apprunid=c6339f940bad288ff48845ffcda4bef088fe139a_1496999908&auid=c6339f940bad288ff48845ffcda4bef088fe139a&city=CN_1_5_1&code=YmCvWEh2PdhpYNXO&ct=2&ctime=1496999997034&cur_url=details_1_10033652&idfa=A7EACEDD-FC11-41CB-A585-26ACD0A72463&ilu=0&install_id=c6339f940bad288ff48845ffcda4bef088fe139a&lc=9703FEF2-4928-44FD-A376-A04886AA8DBF&nt=wifi&p1=0&p2=0a1&p3=0a12&platform=Le123Plat005&plattype=iphone&r=101795744444&ref=details&sig=bcfd893fcba62bd303ff4affed6f34c3&stime=1496999997034&ts=1496999997035&uuid=c6339f940bad288ff48845ffcda4bef088fe139a&ver=3.7.3&version=2.1.9";
+    NSString *urlTest_html = @"uuid=B0B9C8C4-9D3C-4178-9051-26B81FC1DC51&p1=0&app_name=Shandian_ios&p2=0a1&idfa=A7EACEDD-FC11-41CB-A585-26ACD0A72463&ct=2&ilu=0&lc=c6339f940bad288ff48845ffcda4bef088fe139a&p3=0a12&stime=1496999727852&r=103212448430&app=2.1.9&ctime=1496999727852&apprunid=c6339f940bad288ff48845ffcda4bef088fe139a_1496999726&ver=3.7.3&install_id=c6339f940bad288ff48845ffcda4bef088fe139a&nt=wifi&ref=home&auid=c6339f940bad288ff48845ffcda4bef088fe139a&version=2.1.9&ts=1496999997035%20&sig=bcfd893fcba62bd303ff4affed6f34c3&plattype=iphone&platform=Le123Plat005&cur_url=details_1_10033652&code=YmCvWEh2PdhpYNXO&city=CN_1_5_1";
+    
+    NSArray *arrImg_gif     = [self arrWithDepart:@"&" desStr:urlimg_gif];
+    NSArray *arrTest_html   = [self arrWithDepart:@"&" desStr:urlTest_html];
+    
+    NSString *baseUrl = @"http://apple.www.leyingtt.com/pgv/?";
+    NSString *testUrl1 = [arrImg_gif componentsJoinedByString:@"&"];
+    testUrl1 = [baseUrl stringByAppendingString:testUrl1];
+    
+    NSString *testUrl2 = [arrTest_html componentsJoinedByString:@"&"];
+    testUrl2 = [baseUrl stringByAppendingString:testUrl2];
+
+    
+    NSMutableArray *muArr = [NSMutableArray array];
+    for (NSString *partA in arrTest_html) {
+        for (NSString *partB in arrImg_gif) {
+            NSRange equealR = [partA rangeOfString:@"="];
+            NSString *headA = [partA substringToIndex:equealR.location];
+            
+            if ([partB hasPrefix:headA]) {
+                NSString *headB = [partB substringToIndex:equealR.location];
+                
+                if ([headA isEqualToString:headB]) {
+                    [muArr addObject:partB];
+                }
+            }
+        }
+    }
+    NSLog(@"%@",muArr);
+    
+    NSString *testUrl = [muArr componentsJoinedByString:@"&"];
+    
+    NSMutableArray *leaveArr = [NSMutableArray array];
+    
+    for (NSString *partY in arrImg_gif) {
+        BOOL have = NO;
+        for (NSString *partN in muArr) {
+            if ([partN isEqualToString:partY]) {
+                have = YES;
+            }
+        }
+        if (have == NO) {
+            [leaveArr addObject:partY];
+        }
+    }
+    
+    NSLog(@"%@",leaveArr);
+    NSString *leaveStr = [leaveArr componentsJoinedByString:@"&"];
+    
+    
+    
+    
+    
+    
     
     NSLog(@"%s,%d",DefineParamCount(__FILE__,__LINE__));
     
