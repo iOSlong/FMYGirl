@@ -26,6 +26,9 @@
     [self.arrDataSource addObject:@"test progress"];
     [self.arrDataSource addObject:@"test progress"];
     [self.arrDataSource addObject:@"test progress"];
+    
+//    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
+//    self.navigationItem.backBarButtonItem = backBarButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {

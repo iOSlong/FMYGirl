@@ -33,6 +33,8 @@
         {
             MBProgressViewController *mbprogressVC = [MBProgressViewController new];
             desVC  = mbprogressVC;
+            UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
+            self.navigationItem.backBarButtonItem = backBarButtonItem;
         }
     }
     desVC.hidesBottomBarWhenPushed = YES;

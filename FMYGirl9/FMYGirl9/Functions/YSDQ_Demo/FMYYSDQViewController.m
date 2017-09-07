@@ -9,6 +9,7 @@
 #import "FMYYSDQViewController.h"
 #import "FMYYSDQDetailViewController.h"
 #import "FMYImgLoadViewController.h"
+#import "FMYDBHelperViewController.h"
 
 @interface FMYYSDQViewController ()
 
@@ -21,6 +22,7 @@
     // Do any additional setup after loading the view.
     [self.arrDataSource addObject:@"Detail_VC"];
     [self.arrDataSource addObject:@"ImgLoad"];
+    [self.arrDataSource addObject:@"DBHelper"];
 
 }
 
@@ -40,6 +42,11 @@
         FMYImgLoadViewController *imgloadVC = [FMYImgLoadViewController new];
         imgloadVC.title = @"ImgLoad";
         desVC = imgloadVC;
+    }else if (indexPath.row == 2)
+    {
+        FMYDBHelperViewController *dbHelperVC = [[FMYDBHelperViewController alloc] init];
+        dbHelperVC.title = @"DBHelper";
+        desVC = dbHelperVC;
     }
     
     [self.navigationController pushViewController:desVC animated:YES];

@@ -94,6 +94,8 @@
 		8EFE49B91E34BAD000B2513A /* NSString+CN.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE49B81E34BAD000B2513A /* NSString+CN.m */; };
 		8EFE49BD1E34BB3000B2513A /* FMYPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE49BC1E34BB3000B2513A /* FMYPerson.m */; };
 		8EFE49C01E34BB9900B2513A /* FMYRuntimTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE49BF1E34BB9900B2513A /* FMYRuntimTableViewController.m */; };
+		B1118ABD1F4C0102007C1956 /* FMYDBHelperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1118ABC1F4C0102007C1956 /* FMYDBHelperViewController.m */; };
+		B1118AC01F4C017C007C1956 /* FMYDBPoet.m in Sources */ = {isa = PBXBuildFile; fileRef = B1118ABF1F4C017C007C1956 /* FMYDBPoet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -261,6 +263,10 @@
 		8EFE49BC1E34BB3000B2513A /* FMYPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYPerson.m; sourceTree = "<group>"; };
 		8EFE49BE1E34BB9900B2513A /* FMYRuntimTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYRuntimTableViewController.h; sourceTree = "<group>"; };
 		8EFE49BF1E34BB9900B2513A /* FMYRuntimTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYRuntimTableViewController.m; sourceTree = "<group>"; };
+		B1118ABB1F4C0102007C1956 /* FMYDBHelperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYDBHelperViewController.h; sourceTree = "<group>"; };
+		B1118ABC1F4C0102007C1956 /* FMYDBHelperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYDBHelperViewController.m; sourceTree = "<group>"; };
+		B1118ABE1F4C017C007C1956 /* FMYDBPoet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYDBPoet.h; sourceTree = "<group>"; };
+		B1118ABF1F4C017C007C1956 /* FMYDBPoet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYDBPoet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -492,6 +498,7 @@
 		8EE66CA31E94CEA800E56AFD /* YSDQ_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				B1118ABA1F4C00D1007C1956 /* DBHelper */,
 				8E2BCA531EFA16A90013B462 /* ImgLoad */,
 				8EE66CA71E94CF0700E56AFD /* Detail_module */,
 				8EE66CA41E94CEF800E56AFD /* FMYYSDQViewController.h */,
@@ -737,6 +744,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B1118ABA1F4C00D1007C1956 /* DBHelper */ = {
+			isa = PBXGroup;
+			children = (
+				B1118ABB1F4C0102007C1956 /* FMYDBHelperViewController.h */,
+				B1118ABC1F4C0102007C1956 /* FMYDBHelperViewController.m */,
+				B1118ABE1F4C017C007C1956 /* FMYDBPoet.h */,
+				B1118ABF1F4C017C007C1956 /* FMYDBPoet.m */,
+			);
+			path = DBHelper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -934,6 +952,8 @@
 				8E0B7CAA1ED7F4AC006D1A13 /* FMYSessionDetailViewController.m in Sources */,
 				8EE66CB01E94E70000E56AFD /* FMYYSDQDetailInfoCell.m in Sources */,
 				8EE66CBA1E95E41B00E56AFD /* FMYCoreTextView.m in Sources */,
+				B1118ABD1F4C0102007C1956 /* FMYDBHelperViewController.m in Sources */,
+				B1118AC01F4C017C007C1956 /* FMYDBPoet.m in Sources */,
 				8EB295BD1E8367B900EF936B /* FMYTableListViewController.m in Sources */,
 				8E1BC1D61E45ABA000F868C1 /* FMYCoreDataViewController.m in Sources */,
 				8E2F0D301E384A1F000394D8 /* FMYRuntimeMsgSendViewController.m in Sources */,
