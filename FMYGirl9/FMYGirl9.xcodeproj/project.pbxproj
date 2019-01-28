@@ -96,6 +96,7 @@
 		8EFE49C01E34BB9900B2513A /* FMYRuntimTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFE49BF1E34BB9900B2513A /* FMYRuntimTableViewController.m */; };
 		B1118ABD1F4C0102007C1956 /* FMYDBHelperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1118ABC1F4C0102007C1956 /* FMYDBHelperViewController.m */; };
 		B1118AC01F4C017C007C1956 /* FMYDBPoet.m in Sources */ = {isa = PBXBuildFile; fileRef = B1118ABF1F4C017C007C1956 /* FMYDBPoet.m */; };
+		B17453041F99E5FC00273546 /* FMYPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B17453031F99E5FC00273546 /* FMYPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -267,6 +268,8 @@
 		B1118ABC1F4C0102007C1956 /* FMYDBHelperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYDBHelperViewController.m; sourceTree = "<group>"; };
 		B1118ABE1F4C017C007C1956 /* FMYDBPoet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYDBPoet.h; sourceTree = "<group>"; };
 		B1118ABF1F4C017C007C1956 /* FMYDBPoet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYDBPoet.m; sourceTree = "<group>"; };
+		B17453021F99E5FC00273546 /* FMYPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMYPickerViewController.h; sourceTree = "<group>"; };
+		B17453031F99E5FC00273546 /* FMYPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMYPickerViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +374,7 @@
 		8E2F0D241E375049000394D8 /* OC_UI */ = {
 			isa = PBXGroup;
 			children = (
+				B17453011F99E57200273546 /* PickerView */,
 				8E8DBA121ECACD1F004CBA9C /* Thirds */,
 				8EE66CB11E95E2F800E56AFD /* CoreText */,
 				8EB295BA1E83675700EF936B /* Tables */,
@@ -755,6 +759,15 @@
 			path = DBHelper;
 			sourceTree = "<group>";
 		};
+		B17453011F99E57200273546 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				B17453021F99E5FC00273546 /* FMYPickerViewController.h */,
+				B17453031F99E5FC00273546 /* FMYPickerViewController.m */,
+			);
+			path = PickerView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -790,6 +803,7 @@
 				TargetAttributes = {
 					8EFE496A1E34B1BE00B2513A = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5335X2M76T;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -909,6 +923,7 @@
 				8EB295C01E8367F000EF936B /* FMYTableScrollViewController.m in Sources */,
 				8E0B7CA71ED7F3D5006D1A13 /* FMYURLSessionViewController.m in Sources */,
 				8E2F0D401E38B49E000394D8 /* FMYMKWebViewController.m in Sources */,
+				B17453041F99E5FC00273546 /* FMYPickerViewController.m in Sources */,
 				8E1BC1E21E45AEA200F868C1 /* FMYUtils.m in Sources */,
 				8EE66CFC1E9C88D200E56AFD /* DQDetailEpisodesPlatView.m in Sources */,
 				8EB295B21E81163E00EF936B /* FMYBannnerView.m in Sources */,
@@ -1085,8 +1100,10 @@
 			baseConfigurationReference = 19745F210658F5ADC7745726 /* Pods-FMYGirl9.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5335X2M76T;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FMYGirl9/Constants/PrefixHeader.pch";
 				INFOPLIST_FILE = FMYGirl9/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fmy.long.FMYGirl9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1098,8 +1115,10 @@
 			baseConfigurationReference = 36C004A94CC27E86FCEA362D /* Pods-FMYGirl9.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5335X2M76T;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FMYGirl9/Constants/PrefixHeader.pch";
 				INFOPLIST_FILE = FMYGirl9/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fmy.long.FMYGirl9;
 				PRODUCT_NAME = "$(TARGET_NAME)";

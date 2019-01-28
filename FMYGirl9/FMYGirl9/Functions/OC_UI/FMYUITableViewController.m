@@ -16,6 +16,7 @@
 #import "FMYTableListViewController.h"
 #import "FMYCoreTextViewController.h"
 #import "FMYThirdsUIViewController.h"
+#import "FMYPickerViewController.h"
 
 @interface FMYUITableViewController ()
 
@@ -36,8 +37,10 @@
     [sectionA addObject:@"FocusBanner —— View"];
     [sectionA addObject:@"UITableView"];
     [sectionA addObject:@"CoreText"];
+    [sectionA addObject:@"PickerView"];
     
     [sectionB addObject:@"Thirds Parts"];
+
     
     [self.arrDataSource addObjectsFromArray:@[sectionA, sectionB]];
 }
@@ -87,6 +90,10 @@
         {
             FMYCoreTextViewController *coreTextVC = [FMYCoreTextViewController new];
             desVC = coreTextVC;
+        }else if (indexPath.row == 7)
+        {
+            FMYPickerViewController *pickerVC = [FMYPickerViewController new];
+            desVC = pickerVC;
         }
     }else{
         if (indexPath.row == 0) {
